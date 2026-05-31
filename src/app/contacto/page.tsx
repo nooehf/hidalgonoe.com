@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Container from "@/components/ui/container";
 import Button from "@/components/ui/button";
 import TransitionView from "@/components/ui/transition-view";
-import { Mail, Clock, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Mail, Send, CheckCircle2 } from "lucide-react";
 
 export default function Contacto() {
   const [formState, setFormState] = useState({
@@ -93,26 +93,43 @@ export default function Contacto() {
             </div>
 
             <div className="flex items-start gap-4">
-              <MapPin className="w-5 h-5 text-brand-muted shrink-0 mt-0.5" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-brand-muted shrink-0 mt-0.5">
+                <path d="M22 12c0 5.52-4.48 10-10 10-1.72 0-3.34-.44-4.78-1.21L2 22l1.25-5.02C2.47 15.54 2 13.82 2 12 2 6.48 6.48 2 12 2s10 4.48 10 10z"/>
+                <path d="M8.5 8.5c.3.8 1.1 2.3 2.5 3.7 1.4 1.4 2.9 2.2 3.7 2.5.4.1.8-.1 1-.4l.7-1c.2-.3.1-.7-.2-.8l-2-1c-.3-.1-.7 0-.9.3l-.4.5c-.2.3-.6.3-.9.1-.4-.3-1.1-1-1.4-1.4-.2-.3-.2-.7.1-.9l.5-.4c.3-.2.4-.6.3-.9l-1-2c-.1-.3-.5-.4-.8-.2l-1 .7c-.3.2-.5.6-.4 1z"/>
+              </svg>
               <div className="space-y-1">
                 <p className="text-xs font-mono uppercase tracking-wider text-brand-muted">
-                  Ubicación actual
+                  WhatsApp
                 </p>
-                <p className="font-sans text-sm text-brand-text">
-                  España (Disponible para remoto global)
-                </p>
+                <a
+                  href="https://wa.me/34644215725"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-display text-sm font-semibold text-brand-text hover:underline transition-all"
+                >
+                  +34 644 21 57 25
+                </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <Clock className="w-5 h-5 text-brand-muted shrink-0 mt-0.5" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-brand-muted shrink-0 mt-0.5">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
               <div className="space-y-1">
                 <p className="text-xs font-mono uppercase tracking-wider text-brand-muted">
-                  Horario de Atención
+                  LinkedIn
                 </p>
-                <p className="font-sans text-sm text-brand-text">
-                  Lunes a Viernes, 09:00 - 18:00 (CET)
-                </p>
+                <a
+                  href="https://www.linkedin.com/in/noé-hidalgo-fernández-67bb43231"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-display text-sm font-semibold text-brand-text hover:underline transition-all block truncate max-w-[200px] sm:max-w-none"
+                >
+                  noé-hidalgo-fernández
+                </a>
               </div>
             </div>
           </TransitionView>
