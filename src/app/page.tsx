@@ -93,11 +93,11 @@ export default function Home() {
             <div className="bg-[#0d2a1b] text-brand-bg aspect-video flex flex-col justify-between p-8 sm:p-12 relative overflow-hidden select-none cursor-pointer border border-white/5">
               <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]" />
               
-              <div className="relative z-10 flex justify-between items-start w-full">
+              <div className="relative z-10 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 w-full items-start">
                 <span className="font-display text-xs tracking-widest uppercase opacity-60">
                   PROYECTO DESTACADO / 01
                 </span>
-                <span className="font-display text-xs tracking-wider border border-white/20 px-2.5 py-0.5 rounded-full">
+                <span className="font-display text-[10px] sm:text-xs tracking-wider border border-white/20 px-2.5 py-0.5 rounded-full max-w-fit">
                   SEO & CRM INTEGRATION
                 </span>
               </div>

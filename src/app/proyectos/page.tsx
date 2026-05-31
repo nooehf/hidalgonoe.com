@@ -10,6 +10,7 @@ interface Project {
   category: string;
   tags: string[];
   description: string;
+  cardTagline: string;
   caseStudyNumber: string;
   bgColor: string;
   textColor: string;
@@ -25,6 +26,7 @@ const projects: Project[] = [
     tags: ["HTML5", "Tailwind CSS", "JavaScript", "CRM Integration", "SEO"],
     description:
       "Diseño y desarrollo web corporativo para una asesoría de luz y gas. Implementación de un cuestionario interactivo integrado con su CRM y Google Workspace, configuración de emails y estrategia SEO con posicionamiento en el Top 3.",
+    cardTagline: "Automatización comercial conectada a CRM y posicionamiento SEO local en el Top 3.",
     caseStudyNumber: "01",
     bgColor: "bg-[#0d2a1b]", // Deep Forest Green
     textColor: "text-white",
@@ -38,6 +40,7 @@ const projects: Project[] = [
     tags: ["Next.js", "Shopify API", "GraphQL", "Tailwind CSS", "Framer Motion"],
     description:
       "Un prototipo de tienda virtual de moda de lujo creado para lograr navegación instantánea y transiciones de pantalla totalmente fluidas conectando Next.js con la API de Shopify.",
+    cardTagline: "Navegación instantánea de alta gama y transiciones de página fluidas mediante Shopify API.",
     caseStudyNumber: "02",
     bgColor: "bg-[#f5f2eb]", // Cream / Warm gray
     textColor: "text-brand-text",
@@ -51,6 +54,7 @@ const projects: Project[] = [
     tags: ["React", "TypeScript", "Tailwind CSS", "Storybook", "Framer Motion"],
     description:
       "Creación y documentación de un conjunto modular de componentes interactivos y accesibles (cumpliendo WCAG AA) desarrollados con Tailwind CSS para utilizarlos en mis futuros proyectos.",
+    cardTagline: "Biblioteca modular interactiva y accesible bajo estándares normativos WCAG AA.",
     caseStudyNumber: "03",
     bgColor: "bg-[#18181b]", // Pure Zinc Dark
     textColor: "text-white",
@@ -100,11 +104,11 @@ export default function Proyectos() {
                   {/* Grid Background details */}
                   <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:28px_28px]" />
 
-                  <div className="relative z-10 flex justify-between items-start w-full">
+                  <div className="relative z-10 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 w-full items-start">
                     <span className="font-display text-xs tracking-widest uppercase opacity-60">
                       PROYECTO / {project.caseStudyNumber}
                     </span>
-                    <span className="font-display text-xs tracking-wider border border-current/20 px-2.5 py-0.5 rounded-full uppercase">
+                    <span className="font-display text-[10px] sm:text-xs tracking-wider border border-current/20 px-2.5 py-0.5 rounded-full uppercase max-w-fit">
                       {project.category}
                     </span>
                   </div>
@@ -114,7 +118,7 @@ export default function Proyectos() {
                       {project.name}.
                     </h3>
                     <p className="text-sm sm:text-base opacity-75 font-sans max-w-md">
-                      {project.description.slice(0, 120)}...
+                      {project.cardTagline}
                     </p>
                   </div>
 

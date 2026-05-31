@@ -37,9 +37,10 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${outfit.variable} h-full antialiased`}
+      className={`${inter.variable} ${outfit.variable} h-full antialiased overflow-x-hidden max-w-full`}
+      data-scroll-behavior="smooth"
     >
-      <body className="min-h-full flex flex-col font-sans bg-brand-bg text-brand-text">
+      <body className="min-h-full flex flex-col font-sans bg-brand-bg text-brand-text overflow-x-hidden max-w-full">
         <Navbar />
         {/* Generous top margin to prevent nav overlap, keeping asymmetry and clean breathing room */}
         <main className="flex-grow pt-24 md:pt-32 pb-16">{children}</main>
