@@ -10,7 +10,8 @@ import Container from "./container";
 const navLinks = [
   { name: "Inicio", href: "/" },
   { name: "Proyectos", href: "/proyectos" },
-  { name: "Servicios & CV", href: "/servicios" },
+  { name: "Servicios", href: "/servicios" },
+  { name: "Sobre mí & CV", href: "/sobre-mi" },
   { name: "Contacto", href: "/contacto" },
 ];
 

@@ -13,6 +13,8 @@ interface ButtonProps {
   variant?: "primary" | "secondary" | "minimal";
   showArrow?: boolean;
   type?: "button" | "submit" | "reset";
+  target?: string;
+  rel?: string;
 }
 
 export default function Button({
@@ -23,6 +25,8 @@ export default function Button({
   variant = "primary",
   showArrow = false,
   type = "button",
+  target,
+  rel,
 }: ButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-center font-display text-sm font-medium tracking-tight transition-all duration-300 focus:outline-hidden focus:ring-1 focus:ring-brand-dark/20";
@@ -59,7 +63,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={`${baseStyles} ${variants[variant]} ${className}`}>
+      <Link href={href} target={target} rel={rel} className={`${baseStyles} ${variants[variant]} ${className}`}>
         {buttonContent}
       </Link>
     );

@@ -17,6 +17,7 @@ interface CaseStudy {
   bannerBg: string;
   bannerBorder: string;
   tagline: string;
+  liveUrl?: string;
   
   problemText: string;
   problemDetails: string[];
@@ -30,42 +31,43 @@ interface CaseStudy {
 }
 
 const caseStudies: Record<string, CaseStudy> = {
-  zenith: {
-    slug: "zenith",
-    name: "ZENITH",
-    category: "Fintech Interface Design",
-    client: "Caso de Estudio Personal",
-    date: "Enero 2026",
-    role: "Diseño & Programación Frontend",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Recharts"],
-    bannerBg: "bg-[#0b0f19]",
-    bannerBorder: "border-white/10",
-    tagline: "Rediseño visual y técnico de un panel analítico interactivo con flujo de datos simulados.",
+  energialeon: {
+    slug: "energialeon",
+    name: "ENERGÍA LEÓN",
+    category: "Asesoría Energética & Digitalización",
+    client: "Asesoría Energética León",
+    date: "Marzo 2026",
+    role: "Diseño Web & Automatización de Negocio",
+    tags: ["HTML5", "Tailwind CSS", "JavaScript", "Google Workspace", "CRM Integration", "SEO"],
+    bannerBg: "bg-[#0d2a1b]",
+    bannerBorder: "border-emerald-900/20",
+    tagline: "Diseño web, configuración de correos corporativos e integración automatizada de cuestionario con CRM y Google Workspace.",
+    liveUrl: "https://energialeon.com",
     
-    problemText: "Me propuse el reto personal de construir un panel interactivo complejo. Quería entender de forma práctica cómo los programadores profesionales optimizan el procesamiento de flujos pesados de información en la web sin congelar la pantalla ni bloquear el navegador debido a códigos JS masivos.",
+    problemText: "Asesoría Energética León necesitaba dar el salto al canal digital para captar clientes en España. Su flujo de trabajo diario era 100% manual: recibían facturas, anotaban datos en papel y analizaban los consumos de luz y gas uno a uno. El reto principal era crear una plataforma que automatizara la captación, recopilara la información de los clientes de forma estructurada y los posicionara localmente frente a competidores en buscadores.",
     problemDetails: [
-      "Reto de cargar gráficos interactivos detallados de forma rápida y responsive.",
-      "Necesidad de mantener la UI fluida al renderizar simulaciones continuas.",
-      "Aprender a organizar componentes dinámicos en una jerarquía limpia."
+      "Proceso de análisis manual propenso a errores al transcribir datos de consumo.",
+      "Inexistencia de presencia digital corporativa, dominio propio o correos profesionales.",
+      "Dificultad para recibir, organizar y archivar facturas de luz/gas enviadas por clientes."
     ],
     
-    solutionText: "Estructuré el proyecto en Next.js usando Server Components para minimizar el peso inicial del código. Investigué cómo usar la carga diferida (lazy loading) e implementé la renderización asíncrona de gráficos interactivos, permitiendo que la interfaz cargue instantáneamente y los datos aparezcan con animaciones de entrada suaves.",
+    solutionText: "Diseñé y desarrollé un sitio web de alto rendimiento centrado en la conversión. Implementé un cuestionario interactivo optimizado para que los clientes adjunten sus datos de consumo de forma muy intuitiva. Conecté este formulario mediante automatizaciones directamente con el CRM y el entorno de Google Workspace (Google Drive/Sheets) del asesor para que cada solicitud entrante cree una ficha estructurada automáticamente. Además, configuré la infraestructura de dominios, emails corporativos y ejecuté una estrategia de SEO local localizando palabras clave altamente competitivas.",
     solutionDetails: [
-      "Estructuración de componentes de servidor para reducir el bundle inicial.",
-      "Uso de librerías de gráficos ligeras y modularizadas.",
-      "Diseño de un tema visual de alto contraste minimalista y sofisticado."
+      "Creación de un cuestionario digital paso a paso con validaciones en tiempo real.",
+      "Automatización mediante conexiones webhooks para enviar respuestas al CRM y almacenar facturas en Google Drive.",
+      "Optimización técnica de velocidad, metaetiquetas estructuradas y SEO On-Page local."
     ],
     
-    resultText: "Este proyecto me brindó una profunda comprensión sobre el rendimiento web y la optimización en Next.js. El panel se siente increíblemente rápido al navegar.",
+    resultText: "La integración digital transformó radicalmente la operativa diaria del negocio, liberando más de la mitad del tiempo de trabajo administrativo y automatizando el flujo de entrada de clientes. La web logró posicionarse de forma consistente en el Top 3 de los resultados locales de búsqueda en Google.",
     resultStats: [
-      { label: "Código de Carga Inicial", value: "80 KB" },
-      { label: "Tiempo de Respuesta UI", value: "0.8 s" },
-      { label: "Puntuación Lighthouse", value: "100" }
+      { label: "Posición en Google", value: "Top 3" },
+      { label: "Tiempo Administrativo", value: "-60%" },
+      { label: "Sistemas Conectados", value: "3" }
     ],
     resultDetails: [
-      "Optimización extrema de componentes reduciendo el peso de carga inicial.",
-      "Puntuación técnica perfecta en los reportes de rendimiento de Lighthouse.",
-      "Aprendizaje práctico sobre flujos de estado dinámicos."
+      "Automatización total del 100% de las solicitudes entrantes directo al CRM.",
+      "Configuración profesional de la identidad digital (emails corporativos con entregabilidad optimizada).",
+      "Ahorro masivo de tiempo operativo y unificación del canal de comunicación con el cliente."
     ]
   },
   aura: {
@@ -97,7 +99,7 @@ const caseStudies: Record<string, CaseStudy> = {
     resultText: "Logré crear un prototipo funcional precioso que se siente alive. Es el ejemplo ideal de cómo el diseño y el código pueden unirse para crear una experiencia memorable.",
     resultStats: [
       { label: "Transición de Páginas", value: "180 ms" },
-      { label: "Rendimiento Móvil", value: "100/100" },
+      { label: "Tiempo de Carga", value: "<0.3s" },
       { label: "Optimización Visual", value: "100%" }
     ],
     resultDetails: [
@@ -148,7 +150,7 @@ const caseStudies: Record<string, CaseStudy> = {
 
 export async function generateStaticParams() {
   return [
-    { slug: "zenith" },
+    { slug: "energialeon" },
     { slug: "aura" },
     { slug: "pulse" }
   ];
@@ -189,7 +191,7 @@ export default async function ProyectoDetail({ params }: PageProps) {
               isLight ? "text-brand-text" : "text-white"
             } border ${
               project.bannerBorder
-            } p-8 sm:p-16 lg:p-24 aspect-[21/9] flex flex-col justify-between relative overflow-hidden select-none`}
+            } p-6 sm:p-16 lg:p-24 aspect-[1.1/1] sm:aspect-[16/9] md:aspect-[21/9] flex flex-col justify-between relative overflow-hidden select-none`}
           >
             {/* Grid overlay */}
             <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:32px_32px]" />
@@ -203,11 +205,11 @@ export default async function ProyectoDetail({ params }: PageProps) {
               </span>
             </div>
 
-            <div className="relative z-10 py-6 sm:py-0">
-              <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter mb-4 leading-none">
+            <div className="relative z-10 py-4 sm:py-0">
+              <h1 className="font-display text-3xl sm:text-7xl lg:text-8xl font-bold tracking-tighter mb-4 leading-none">
                 {project.name}.
               </h1>
-              <p className="text-sm sm:text-lg max-w-xl opacity-80 leading-relaxed font-sans text-pretty">
+              <p className="text-xs sm:text-lg max-w-xl opacity-80 leading-relaxed font-sans text-pretty">
                 {project.tagline}
               </p>
             </div>
@@ -281,7 +283,7 @@ export default async function ProyectoDetail({ params }: PageProps) {
         <div className="lg:col-span-4 space-y-10 lg:sticky lg:top-32 h-fit">
           <TransitionView yOffset={20} className="bg-brand-dark/3 border border-brand-dark/5 p-8 space-y-8">
             <h2 className="font-display text-xs font-semibold uppercase tracking-widest text-brand-text">
-              Resultados de Aprendizaje
+              Resultados
             </h2>
             
             {/* Stats Block */}
@@ -297,6 +299,19 @@ export default async function ProyectoDetail({ params }: PageProps) {
                 </div>
               ))}
             </div>
+
+            {project.liveUrl && (
+              <div className="pt-6 border-t border-brand-border/40">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center font-display text-xs sm:text-sm font-semibold tracking-tight bg-brand-text text-brand-bg px-6 py-3 hover:bg-transparent hover:text-brand-text border border-brand-text transition-all duration-300 rounded-none uppercase"
+                >
+                  Visitar Sitio Web
+                </a>
+              </div>
+            )}
           </TransitionView>
 
           {/* Impact summary list */}

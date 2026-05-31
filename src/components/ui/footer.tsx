@@ -35,7 +35,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/servicios" className="text-sm text-brand-muted hover:text-brand-text transition-colors">
-                  Servicios & CV
+                  Servicios
+                </Link>
+              </li>
+              <li>
+                <Link href="/sobre-mi" className="text-sm text-brand-muted hover:text-brand-text transition-colors">
+                  Sobre mí & CV
                 </Link>
               </li>
               <li>

@@ -18,17 +18,17 @@ interface Project {
 
 const projects: Project[] = [
   {
-    slug: "zenith",
-    title: "ZENITH: Mi reto de programación y dashboard interactivo",
-    name: "ZENITH",
-    category: "Proyecto Personal / Práctica",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Recharts"],
+    slug: "energialeon",
+    title: "ENERGÍA LEÓN: Automatización de Asesoría Energética",
+    name: "ENERGÍA LEÓN",
+    category: "Automatización & Posicionamiento SEO",
+    tags: ["HTML5", "Tailwind CSS", "JavaScript", "CRM Integration", "SEO"],
     description:
-      "Rediseño visual y técnico de un panel analítico en tiempo real. Creado como ejercicio avanzado de programación en Next.js para experimentar con optimización de datos y gráficos dinámicos sin congelar la UI.",
+      "Diseño y desarrollo web corporativo para una asesoría de luz y gas. Implementación de un cuestionario interactivo integrado con su CRM y Google Workspace, configuración de emails y estrategia SEO con posicionamiento en el Top 3.",
     caseStudyNumber: "01",
-    bgColor: "bg-[#0b0f19]", // Deep navy/slate
+    bgColor: "bg-[#0d2a1b]", // Deep Forest Green
     textColor: "text-white",
-    borderColor: "border-white/10",
+    borderColor: "border-emerald-950/20",
   },
   {
     slug: "aura",
@@ -68,7 +68,7 @@ export default function Proyectos() {
             Mi Portafolio
           </span>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-text mt-4">
-            Proyectos & Experimentos
+            Proyectos & Experiencia
           </h1>
         </TransitionView>
         <TransitionView delay={0.2} yOffset={15}>
