@@ -1,6 +1,8 @@
 import React from "react";
 import Container from "@/components/ui/container";
 import Button from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import TransitionView from "@/components/ui/transition-view";
 
 interface Project {
@@ -33,6 +35,20 @@ const projects: Project[] = [
     borderColor: "border-emerald-950/20",
   },
   {
+    slug: "mylocalcommerce",
+    title: "MY LOCAL COMMERCE: Comunidad Digital para Negocios Locales",
+    name: "MY LOCAL COMMERCE",
+    category: "Comunidad & Software (En Obras)",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Fidelización", "Reservas", "Gestión Stock"],
+    description:
+      "Una plataforma de software comunitaria diseñada para digitalizar y conectar comercios de barrio. No es una tienda online o e-commerce, sino un ecosistema donde los negocios gestionan su stock, reservas de servicios y clientes, mientras que los usuarios acumulan puntos de fidelización y realizan reservas en sus locales favoritos. (Proyecto actualmente en desarrollo).",
+    cardTagline: "Comunidad de negocios locales con programas de fidelización, reservas y gestión de stock. (En Construcción).",
+    caseStudyNumber: "02",
+    bgColor: "bg-[#0c1524]", // Deep Navy Slate
+    textColor: "text-white",
+    borderColor: "border-slate-950/20",
+  },
+  {
     slug: "aura",
     title: "AURA: E-commerce Headless de Práctica",
     name: "AURA",
@@ -41,7 +57,7 @@ const projects: Project[] = [
     description:
       "Un prototipo de tienda virtual de moda de lujo creado para lograr navegación instantánea y transiciones de pantalla totalmente fluidas conectando Next.js con la API de Shopify.",
     cardTagline: "Navegación instantánea de alta gama y transiciones de página fluidas mediante Shopify API.",
-    caseStudyNumber: "02",
+    caseStudyNumber: "03",
     bgColor: "bg-[#f5f2eb]", // Cream / Warm gray
     textColor: "text-brand-text",
     borderColor: "border-brand-dark/10",
@@ -55,7 +71,7 @@ const projects: Project[] = [
     description:
       "Creación y documentación de un conjunto modular de componentes interactivos y accesibles (cumpliendo WCAG AA) desarrollados con Tailwind CSS para utilizarlos en mis futuros proyectos.",
     cardTagline: "Biblioteca modular interactiva y accesible bajo estándares normativos WCAG AA.",
-    caseStudyNumber: "03",
+    caseStudyNumber: "04",
     bgColor: "bg-[#18181b]", // Pure Zinc Dark
     textColor: "text-white",
     borderColor: "border-white/10",
@@ -99,10 +115,10 @@ export default function Proyectos() {
                 }`}
               >
                 <div
-                  className={`${project.bgColor} ${project.textColor} aspect-[16/10] flex flex-col justify-between p-8 sm:p-12 relative overflow-hidden group select-none cursor-pointer border ${project.borderColor}`}
+                  className={`${project.bgColor} ${project.textColor} aspect-[1.1/1] sm:aspect-[16/10] flex flex-col justify-between p-6 sm:p-12 relative overflow-hidden group select-none cursor-pointer border ${project.borderColor}`}
                 >
                   {/* Grid Background details */}
-                  <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:28px_28px]" />
+                  <div className="absolute inset-0 opacity-5 pointer-events-none bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:28px_28px]" />
 
                   <div className="relative z-10 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 w-full items-start">
                     <span className="font-display text-xs tracking-widest uppercase opacity-60">
@@ -113,11 +129,11 @@ export default function Proyectos() {
                     </span>
                   </div>
 
-                  <div className="relative z-10 my-auto py-8">
-                    <h3 className="font-display text-4xl sm:text-6xl font-bold tracking-tighter mb-4 leading-none">
+                  <div className="relative z-10 my-auto py-4 sm:py-8">
+                    <h3 className="font-display text-3xl sm:text-6xl font-bold tracking-tighter mb-3 leading-none">
                       {project.name}.
                     </h3>
-                    <p className="text-sm sm:text-base opacity-75 font-sans max-w-md">
+                    <p className="text-xs sm:text-base opacity-75 font-sans max-w-md">
                       {project.cardTagline}
                     </p>
                   </div>
@@ -167,11 +183,14 @@ export default function Proyectos() {
                   ))}
                 </div>
 
-                <div className="pt-4">
-                  <Button href={`/proyectos/${project.slug}`} variant="secondary" showArrow>
-                    Ver Detalles
-                  </Button>
-                </div>
+                  <div className="pt-4">
+                    <Link href={`/proyectos/${project.slug}`} className="inline-flex items-center gap-1.5 font-display text-sm font-medium tracking-tight transition-all duration-300 bg-transparent text-brand-text px-6 py-3 border border-brand-dark/20 hover:border-brand-dark active:scale-98 rounded-none">
+                      Ver Detalles
+                      <span className="flex items-center">
+                        <ArrowUpRight className="w-4 h-4 stroke-[1.5]" />
+                      </span>
+                    </Link>
+                  </div>
               </TransitionView>
             </div>
           );

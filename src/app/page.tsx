@@ -107,7 +107,7 @@ export default function Home() {
                   ENERGÍA LEÓN.
                 </h3>
                 <p className="text-sm sm:text-base opacity-75 font-sans max-w-md text-pretty">
-                  Desarrollo web y automatización de procesos comerciales para Asesoría Energética León. Conectado con CRM y Google Workspace.
+                  Automatización comercial conectada a CRM y posicionamiento SEO local en el Top 3.
                 </p>
               </div>
 

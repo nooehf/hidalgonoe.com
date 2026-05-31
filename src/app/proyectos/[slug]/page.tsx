@@ -18,6 +18,8 @@ interface CaseStudy {
   bannerBorder: string;
   tagline: string;
   liveUrl?: string;
+  githubUrl?: string;
+  inDevelopment?: boolean;
   
   problemText: string;
   problemDetails: string[];
@@ -68,6 +70,45 @@ const caseStudies: Record<string, CaseStudy> = {
       "Automatización total del 100% de las solicitudes entrantes directo al CRM.",
       "Configuración profesional de la identidad digital (emails corporativos con entregabilidad optimizada).",
       "Ahorro masivo de tiempo operativo y unificación del canal de comunicación con el cliente."
+    ]
+  },
+  mylocalcommerce: {
+    slug: "mylocalcommerce",
+    name: "MY LOCAL COMMERCE",
+    category: "Comunidad de Negocios (En Obras)",
+    client: "Comercios locales",
+    date: "En Desarrollo",
+    role: "Arquitectura de Software & UI",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Fidelización", "Reservas", "Gestión Stock"],
+    bannerBg: "bg-[#0c1524]",
+    bannerBorder: "border-slate-900/20",
+    tagline: "Construyendo una plataforma comunitaria para digitalizar comercios de barrio mediante programas de fidelización, reservas de servicios y gestión de stocks y clientes. (Proyecto en Obras).",
+    inDevelopment: true,
+    
+    problemText: "El pequeño comercio de barrio compite en desventaja frente a las grandes plataformas globales, careciendo de herramientas sencillas de fidelización y reservas integradas. Para solucionar esto, estoy desarrollando un software comunitario que unifica los negocios locales bajo una sola plataforma. No es un e-commerce o tienda online convencional, sino un ecosistema donde los comercios gestionan su stock, reservas de servicios y clientes, permitiendo además a los usuarios acumular puntos y reservar en tiempo real.",
+    problemDetails: [
+      "Ausencia de sistemas locales de fidelización por puntos que incentiven el consumo de barrio repetido.",
+      "Dificultad de los comercios pequeños para gestionar reservas y stock sin sistemas complejos e individuales.",
+      "Necesidad de agrupar y digitalizar negocios locales bajo una comunidad interactiva y colaborativa."
+    ],
+    
+    solutionText: "Estoy diseñando e implementando la arquitectura técnica y el frontend de la plataforma con Next.js, Tailwind CSS y TypeScript. El software ofrece dos áreas diferenciadas: un panel de administración para el comerciante (donde controla el stock en tiempo real, gestiona reservas y visualiza su cartera de clientes - CRM) y una interfaz intuitiva para el cliente final (donde descubre locales cercanos, agenda reservas de citas o servicios en su calendario y consulta su monedero de puntos de fidelización acumulados por reservar). Actualmente, el backend y la lógica de fidelización se encuentran en fase de desarrollo activo.",
+    solutionDetails: [
+      "Modelado y desarrollo en tiempo real de la billetera digital de fidelización y asignación de puntos.",
+      "Diseño de calendarios y flujos para agendar reservas de citas o servicios directamente con el local.",
+      "Estructuración del panel de administración del comercio para el control de inventario de stock y clientes."
+    ],
+    
+    resultText: "El software está avanzando en su desarrollo a paso firme. La meta es consolidar una base modular ultra-rápida y limpia para integrar bases de datos distribuidas y pasarelas de canjes, ofreciendo a los comercios una herramienta de nivel profesional.",
+    resultStats: [
+      { label: "Estado actual", value: "En Obras" },
+      { label: "Módulos Lógicos", value: "4" },
+      { label: "Fase del Código", value: "Alpha" }
+    ],
+    resultDetails: [
+      "Maquetado modular en progreso de la interfaz de cliente final e interacciones iniciales.",
+      "Lógica de asignación de puntos y modelado de reservas/stock en construcción activa.",
+      "Repositorio abierto en GitHub para asegurar un seguimiento público y transparente de los avances."
     ]
   },
   aura: {
@@ -151,6 +192,7 @@ const caseStudies: Record<string, CaseStudy> = {
 export async function generateStaticParams() {
   return [
     { slug: "energialeon" },
+    { slug: "mylocalcommerce" },
     { slug: "aura" },
     { slug: "pulse" }
   ];
@@ -239,6 +281,35 @@ export default async function ProyectoDetail({ params }: PageProps) {
       </section>
 
       {/* Case Study Desglose Editorial */}
+      {project.inDevelopment && (
+        <TransitionView yOffset={20}>
+          <div className="bg-brand-dark/3 border border-brand-dark/10 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 rounded-none mb-12">
+            <div className="space-y-1">
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-indigo-500/10 text-indigo-600 dark:text-indigo-500 text-[10px] font-mono font-semibold uppercase tracking-wider rounded-none mb-1">
+                Proyecto en Construcción
+              </span>
+              <h4 className="font-display text-base font-bold text-brand-text">
+                Este software se encuentra actualmente en fase activa de desarrollo.
+              </h4>
+              <p className="text-xs text-brand-muted font-sans leading-relaxed max-w-2xl text-pretty">
+                Estoy construyendo y afinando los módulos de reservas de servicios, gestión de stock, clientes (CRM) y programas de fidelización por puntos. El repositorio se actualiza constantemente a medida que avanzo la lógica y el backend.
+              </p>
+            </div>
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-2 font-display text-xs font-semibold tracking-tight border border-brand-text bg-brand-text text-brand-bg px-4 py-2 hover:bg-transparent hover:text-brand-text transition-all duration-300 rounded-none uppercase"
+              >
+                Ver Código en GitHub →
+              </a>
+            )}
+          </div>
+        </TransitionView>
+      )}
+
+      {/* Case Study Desglose Editorial */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 pt-4">
         {/* Left Column: Problem & Solution (Editorial focus) */}
         <div className="lg:col-span-8 space-y-16">
@@ -300,16 +371,28 @@ export default async function ProyectoDetail({ params }: PageProps) {
               ))}
             </div>
 
-            {project.liveUrl && (
-              <div className="pt-6 border-t border-brand-border/40">
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center font-display text-xs sm:text-sm font-semibold tracking-tight bg-brand-text text-brand-bg px-6 py-3 hover:bg-transparent hover:text-brand-text border border-brand-text transition-all duration-300 rounded-none uppercase"
-                >
-                  Visitar Sitio Web
-                </a>
+            {(project.liveUrl || project.githubUrl) && (
+              <div className="pt-6 border-t border-brand-border/40 flex flex-col gap-3">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center font-display text-xs sm:text-sm font-semibold tracking-tight bg-brand-text text-brand-bg px-6 py-3 hover:bg-transparent hover:text-brand-text border border-brand-text transition-all duration-300 rounded-none uppercase"
+                  >
+                    Visitar Sitio Web
+                  </a>
+                )}
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center font-display text-xs sm:text-sm font-semibold tracking-tight bg-transparent text-brand-text hover:bg-brand-text hover:text-brand-bg px-6 py-3 border border-brand-text transition-all duration-300 rounded-none uppercase"
+                  >
+                    Ver Código en GitHub
+                  </a>
+                )}
               </div>
             )}
           </TransitionView>
