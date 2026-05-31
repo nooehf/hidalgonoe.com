@@ -17,15 +17,15 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Noé Hidalgo | Desarrollador Frontend Senior",
+  title: "Noé Hidalgo | Negocio & Desarrollo Web Premium",
   description:
-    "Desarrollador Frontend Senior y consultor independiente. Diseño y desarrollo experiencias web minimalistas y de altísimo rendimiento para empresas y startups globales.",
+    "Estudiante de ADE (Administración y Dirección de Empresas) y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo frontend de alto rendimiento.",
   keywords: [
-    "Desarrollador Frontend",
-    "Senior React Developer",
-    "Next.js Consultant",
-    "Freelance Web Developer",
-    "Tailwind CSS Specialist",
+    "Estudiante ADE",
+    "Desarrollador Web Independiente",
+    "Estrategia Digital",
+    "Diseño Web Premium",
+    "Next.js Developer",
   ],
 };
 

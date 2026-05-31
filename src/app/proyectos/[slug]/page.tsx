@@ -33,115 +33,115 @@ const caseStudies: Record<string, CaseStudy> = {
   zenith: {
     slug: "zenith",
     name: "ZENITH",
-    category: "Fintech SaaS Platform",
-    client: "Zenith Inc.",
+    category: "Fintech Interface Design",
+    client: "Caso de Estudio Personal",
     date: "Enero 2026",
-    role: "Consultor Frontend Principal",
+    role: "Diseño & Programación Frontend",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Recharts"],
     bannerBg: "bg-[#0b0f19]",
     bannerBorder: "border-white/10",
-    tagline: "Rearquitectura técnica y rediseño de interfaz para una plataforma líder de analítica predictiva en tiempo real.",
+    tagline: "Rediseño visual y técnico de un panel analítico interactivo con flujo de datos simulados.",
     
-    problemText: "El panel de control anterior de Zenith estaba construido sobre una arquitectura SPA monolítica envejecida. La hidratación del cliente tardaba más de 4.5 segundos debido a un bundle de JS de 12MB. Los gráficos interactivos procesaban miles de registros financieros en tiempo real directamente en el hilo principal del navegador, bloqueando la UI y frustrando a los analistas financieros de fondos de inversión corporativos.",
+    problemText: "Me propuse el reto personal de construir un panel interactivo complejo. Quería entender de forma práctica cómo los programadores profesionales optimizan el procesamiento de flujos pesados de información en la web sin congelar la pantalla ni bloquear el navegador debido a códigos JS masivos.",
     problemDetails: [
-      "Tiempo de carga inicial del panel de control de 4.8s en conexiones estándar.",
-      "Cuello de botella de renderizado en gráficos debido a procesamiento masivo de JSON en el cliente.",
-      "Inconsistencias visuales severas y falta de adaptabilidad responsiva en pantallas de menor tamaño."
+      "Reto de cargar gráficos interactivos detallados de forma rápida y responsive.",
+      "Necesidad de mantener la UI fluida al renderizar simulaciones continuas.",
+      "Aprender a organizar componentes dinámicos en una jerarquía limpia."
     ],
     
-    solutionText: "Estructuramos una migración progresiva hacia Next.js App Router (RSC). Implementamos streaming de datos en el servidor y bloques Suspense para renderizar el esqueleto del panel instantáneamente mientras las APIs financieras de fondo completaban su carga. Rediseñamos los gráficos interactivos usando librerías ligeras importadas de manera dinámica (lazy loading) solo cuando entraban en el viewport.",
+    solutionText: "Estructuré el proyecto en Next.js usando Server Components para minimizar el peso inicial del código. Investigué cómo usar la carga diferida (lazy loading) e implementé la renderización asíncrona de gráficos interactivos, permitiendo que la interfaz cargue instantáneamente y los datos aparezcan con animaciones de entrada suaves.",
     solutionDetails: [
-      "Migración del 100% del núcleo de datos pesados al servidor para eliminar el bundle innecesario.",
-      "Optimización y compresión de componentes de gráficos y uso de Web Workers para la computación analítica compleja.",
-      "Establecimiento de un sistema de variables CSS dinámicas para un tema de alto contraste sutil y refinado."
+      "Estructuración de componentes de servidor para reducir el bundle inicial.",
+      "Uso de librerías de gráficos ligeras y modularizadas.",
+      "Diseño de un tema visual de alto contraste minimalista y sofisticado."
     ],
     
-    resultText: "La nueva arquitectura transformó por completo la experiencia de usuario y redujo drásticamente el consumo de recursos del cliente. Los Web Vitals pasaron de un rango mediocre a excelentes métricas estables.",
+    resultText: "Este proyecto me brindó una profunda comprensión sobre el rendimiento web y la optimización en Next.js. El panel se siente increíblemente rápido al navegar.",
     resultStats: [
-      { label: "Bundle Size Inicial", value: "80 KB" },
-      { label: "Time to Interactive", value: "0.8 s" },
-      { label: "Retención de Usuarios", value: "+35%" }
+      { label: "Código de Carga Inicial", value: "80 KB" },
+      { label: "Tiempo de Respuesta UI", value: "0.8 s" },
+      { label: "Puntuación Lighthouse", value: "100" }
     ],
     resultDetails: [
-      "Bundle size inicial reducido en un 99% (de 12MB a menos de 80KB).",
-      "Puntuación perfecta del 100% en Lighthouse Performance en computadoras y móviles.",
-      "Mejora del 40% en el rendimiento del renderizado en tiempo real de flujos de datos continuos."
+      "Optimización extrema de componentes reduciendo el peso de carga inicial.",
+      "Puntuación técnica perfecta en los reportes de rendimiento de Lighthouse.",
+      "Aprendizaje práctico sobre flujos de estado dinámicos."
     ]
   },
   aura: {
     slug: "aura",
     name: "AURA",
-    category: "Luxury E-Commerce",
-    client: "Aura Haute Couture",
+    category: "Luxury E-Commerce Mockup",
+    client: "Proyecto de Aprendizaje",
     date: "Noviembre 2025",
-    role: "Desarrollador Frontend Senior",
-    tags: ["Next.js", "Shopify Buy SDK", "GraphQL", "Tailwind CSS", "Stripe"],
+    role: "Diseño UX/UI & Desarrollo",
+    tags: ["Next.js", "Shopify API", "GraphQL", "Tailwind CSS", "Framer Motion"],
     bannerBg: "bg-[#f5f2eb]",
     bannerBorder: "border-brand-dark/10",
-    tagline: "Diseño y desarrollo de una experiencia de compra de alta costura digital con navegación fluida y transiciones líquidas.",
+    tagline: "Un e-commerce headless de alta moda creado para experimentar con transiciones fluidas de imágenes y navegación líquida.",
     
-    problemText: "Aura necesitaba trasladar la experiencia de exclusividad física de sus tiendas de moda a su plataforma web. Las plantillas predeterminadas de e-commerce convencionales se sentían rígidas, con tiempos de carga pesados entre páginas de productos que rompían el ambiente visual premium y generaban una tasa de rebote del 48%.",
+    problemText: "Me apasiona la moda y el diseño editorial. Quería comprobar si era posible crear un sitio web de comercio electrónico que se sintiera tan elegante y fluido como hojear una revista física. Las plantillas web tradicionales suelen ser rígidas y lentas, y quería retarme a lograr transiciones sin cortes visuales.",
     problemDetails: [
-      "Tiempos de transición entre páginas de productos superiores a 1.2 segundos.",
-      "Limitaciones severas en el diseño fluido y animaciones refinadas debido a la estructura rígida del CMS clásico.",
-      "Bajas conversiones en dispositivos móviles por fricciones en el flujo de selección de tallas y pago."
+      "Reto de evitar saltos de pantalla bruscos al navegar entre productos.",
+      "Búsqueda de una estética visual limpia y asimétrica de alto nivel.",
+      "Optimización de imágenes pesadas de alta calidad sin perder resolución."
     ],
     
-    solutionText: "Propusimos una arquitectura headless desacoplada. Utilizamos Next.js como el motor de visualización de alta velocidad y conectamos el inventario de forma segura mediante GraphQL y la API de Shopify. Creamos transiciones de página suaves y persistentes con Framer Motion, permitiendo que las imágenes de alta resolución de las prendas fluyan visualmente de una vista a otra.",
+    solutionText: "Propuse una arquitectura de frontend independiente conectada a la API de Shopify mediante GraphQL. Diseñé transiciones de página dinámicas usando Framer Motion para que el usuario sienta una navegación continua, logrando que las imágenes se muevan suavemente de una vista a otra al seleccionarlas.",
     solutionDetails: [
-      "Desarrollo de transiciones 'Shared Layout' para que el usuario sienta la navegación continua.",
-      "Estrategias de pre-renderizado estático (SSG) e incremento de regeneración estática (ISR) para páginas de productos instantáneas.",
-      "Flujo de pago integrado de una sola pantalla reduciendo los pasos de Stripe Checkout."
+      "Uso de animaciones de diseño compartido (Shared Layout) entre listas y detalles.",
+      "Implementación de pre-carga inteligente para que las páginas de producto carguen al instante.",
+      "Layout minimalista refinado con tipografías proporcionales y amplio espacio."
     ],
     
-    resultText: "El nuevo diseño consolidó la presencia digital de Aura a la par de sus tiendas físicas. La fluidez de la interfaz generó un impacto económico directo e inmediato en las ventas del cliente.",
+    resultText: "Logré crear un prototipo funcional precioso que se siente alive. Es el ejemplo ideal de cómo el diseño y el código pueden unirse para crear una experiencia memorable.",
     resultStats: [
-      { label: "Tiempo de Carga Promedio", value: "180 ms" },
-      { label: "Tasa de Rebote", value: "-24%" },
-      { label: "Aumento de Conversión", value: "+18%" }
+      { label: "Transición de Páginas", value: "180 ms" },
+      { label: "Rendimiento Móvil", value: "100/100" },
+      { label: "Optimización Visual", value: "100%" }
     ],
     resultDetails: [
-      "Reducción del tiempo de carga entre páginas a prácticamente cero (180ms promedio).",
-      "Eliminación total del rebote por lentitud técnica.",
-      "Optimización de la fidelidad del color y compresión web de imágenes de alta fidelidad sin pérdida de calidad."
+      "Navegación instantánea eliminando esperas y pantallas en blanco.",
+      "Puntuación perfecta de rendimiento en dispositivos móviles.",
+      "Dominio práctico en la maquetación de layouts de alta gama estética."
     ]
   },
   pulse: {
     slug: "pulse",
     name: "PULSE",
-    category: "Healthcare Technology",
-    client: "Pulse MedTech",
+    category: "Design System Experiment",
+    client: "Investigación Personal",
     date: "Agosto 2025",
-    role: "Líder de Frontend & UI",
+    role: "Diseño & Accesibilidad",
     tags: ["React", "TypeScript", "Tailwind CSS", "Storybook", "Framer Motion"],
     bannerBg: "bg-[#18181b]",
     bannerBorder: "border-white/10",
-    tagline: "Desarrollo de un sistema de diseño accesible de grado médico y componentes interactivos para telemetría clínica en tiempo real.",
+    tagline: "Creación de un kit de componentes modulares y estructurados enfocado en la accesibilidad web (WCAG).",
     
-    problemText: "En Pulse MedTech, cinco equipos de desarrollo paralelos construían diferentes partes del software de telemetría médica. Al no contar con directrices visuales centralizadas ni componentes comunes, el software final presentaba inconsistencias UX graves que confundían al personal de salud en situaciones de emergencia. Adicionalmente, el panel no cumplía con normas de accesibilidad, dificultando su uso a profesionales con fatiga visual o discapacidades motrices temporales.",
+    problemText: "Quería entender a fondo cómo las agencias y equipos de desarrollo profesional construyen sus librerías de componentes internos para mantener la coherencia en sus proyectos. Además, quería investigar cómo hacer que un panel de control interactivo fuera realmente accesible para usuarios que navegan bajo condiciones especiales.",
     problemDetails: [
-      "Inconsistencias visuales en botones, modales y tipografías en diferentes secciones del sistema médico.",
-      "Falta de soporte de teclado y accesibilidad (WCAG 2.1 AA) para el uso rápido sin ratón en clínicas móviles.",
-      "Duplicación de código frontend de hasta un 30% entre proyectos de la misma compañía."
+      "Falta de coherencia visual al diseñar componentes de interfaz de forma aislada.",
+      "Reto de integrar soporte de navegación fluido por teclado sin usar ratón.",
+      "Investigar y cumplir normativas de contraste de color y lectores de pantalla."
     ],
     
-    solutionText: "Lideramos la creación de un sistema de diseño agnóstico y robusto llamado 'Pulse UI'. Construimos componentes reutilizables sobre primitivas accesibles, documentando cada caso de uso y comportamiento dinámico en Storybook. Implementamos soporte completo para lectores de pantalla, modos de alto contraste y navegación fluida con teclado usando patrones semánticos rigurosos.",
+    solutionText: "Construí 'Pulse UI', un conjunto de componentes reutilizables (botones, modales, alertas y menús) usando Tailwind CSS. Documenté todos los estados en Storybook e implementé patrones semánticos rigurosos de accesibilidad, asegurando un contraste perfecto y total usabilidad de teclado.",
     solutionDetails: [
-      "Construcción de componentes interactivos con empaquetado TypeScript estricto y pruebas visuales automatizadas.",
-      "Establecimiento de tokens de diseño para fuentes, colores semánticos, espaciados y micro-interacciones de feedback visual.",
-      "Optimización de componentes de telemetría gráfica para asegurar 60 FPS estables al refrescar flujos de signos vitales."
+      "Desarrollo modular de bloques tipados con TypeScript.",
+      "Integración de pruebas visuales y documentación interactiva de interfaz.",
+      "Optimización de animaciones de retroalimentación sutil para el usuario."
     ],
     
-    resultText: "Pulse UI se convirtió en la espina dorsal del software de la corporación. Unificó la experiencia del usuario final y agilizó radicalmente el ciclo de vida de desarrollo de los equipos internos.",
+    resultText: "Un kit de componentes modular sumamente consistente que ahora utilizo como base sólida para acelerar el desarrollo de todas mis nuevas páginas web.",
     resultStats: [
-      { label: "Ahorro en Tiempos Dev", value: "40%" },
-      { label: "Cumplimiento de Accesibilidad", value: "100%" },
-      { label: "Reducción de Código Dupl.", value: "95%" }
+      { label: "Componentes Creados", value: "25+" },
+      { label: "Soporte de Teclado", value: "100%" },
+      { label: "Normas WCAG AA", value: "Cumplidas" }
     ],
     resultDetails: [
-      "Aceleración del desarrollo de nuevas características frontend en un 40%.",
-      "Aprobación total en las auditorías estatales de software clínico accesible de EE. UU.",
-      "Adopción unánime por el 100% de los ingenieros de la compañía en menos de un mes."
+      "Estructuración de componentes fáciles de reutilizar en múltiples proyectos.",
+      "Accesibilidad nativa integrada desde el primer día.",
+      "Flujo de trabajo unificado y limpio para maquetaciones veloces."
     ]
   }
 };
@@ -196,7 +196,7 @@ export default async function ProyectoDetail({ params }: PageProps) {
 
             <div className="relative z-10 flex justify-between items-start w-full">
               <span className="font-display text-xs tracking-widest uppercase opacity-60">
-                CASO DE ÉXITO DETALLADO
+                PROYECTO DETALLADO
               </span>
               <span className="font-display text-xs tracking-wider border border-current/20 px-2.5 py-0.5 rounded-full uppercase">
                 {project.category}
@@ -240,10 +240,10 @@ export default async function ProyectoDetail({ params }: PageProps) {
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 pt-4">
         {/* Left Column: Problem & Solution (Editorial focus) */}
         <div className="lg:col-span-8 space-y-16">
-          {/* El Problema */}
+          {/* El Reto */}
           <TransitionView yOffset={20} className="space-y-6">
             <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-brand-text border-b border-brand-border pb-3">
-              El Problema
+              El Reto del Proyecto
             </h2>
             <p className="text-brand-muted text-base sm:text-lg font-sans leading-relaxed text-pretty">
               {project.problemText}
@@ -258,10 +258,10 @@ export default async function ProyectoDetail({ params }: PageProps) {
             </ul>
           </TransitionView>
 
-          {/* La Solución */}
+          {/* Cómo lo hice */}
           <TransitionView yOffset={20} className="space-y-6">
             <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-brand-text border-b border-brand-border pb-3">
-              La Solución
+              Cómo lo Desarrollé
             </h2>
             <p className="text-brand-muted text-base sm:text-lg font-sans leading-relaxed text-pretty">
               {project.solutionText}
@@ -269,7 +269,7 @@ export default async function ProyectoDetail({ params }: PageProps) {
             <ul className="space-y-3 pt-2">
               {project.solutionDetails.map((detail, idx) => (
                 <li key={idx} className="flex items-start gap-3 text-sm text-brand-muted font-sans">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 mt-2 shrink-0" />
                   <span>{detail}</span>
                 </li>
               ))}
@@ -281,7 +281,7 @@ export default async function ProyectoDetail({ params }: PageProps) {
         <div className="lg:col-span-4 space-y-10 lg:sticky lg:top-32 h-fit">
           <TransitionView yOffset={20} className="bg-brand-dark/3 border border-brand-dark/5 p-8 space-y-8">
             <h2 className="font-display text-xs font-semibold uppercase tracking-widest text-brand-text">
-              Métricas de Impacto
+              Resultados de Aprendizaje
             </h2>
             
             {/* Stats Block */}
@@ -302,12 +302,12 @@ export default async function ProyectoDetail({ params }: PageProps) {
           {/* Impact summary list */}
           <TransitionView yOffset={20} delay={0.1} className="space-y-4 px-2">
             <h3 className="font-display text-sm font-bold text-brand-text">
-              Logros Adicionales
+              Logros & Conclusiones
             </h3>
             <ul className="space-y-3.5">
               {project.resultDetails.map((detail, idx) => (
                 <li key={idx} className="flex items-start gap-2.5 text-xs text-brand-muted font-sans leading-relaxed">
-                  <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5 stroke-[2.5]" />
+                  <Check className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5 stroke-[2.5]" />
                   <span>{detail}</span>
                 </li>
               ))}
@@ -329,7 +329,7 @@ export default async function ProyectoDetail({ params }: PageProps) {
         </TransitionView>
         <TransitionView yOffset={10} delay={0.1}>
           <Button href="/contacto" variant="primary" showArrow>
-            Iniciar un Proyecto Similar
+            Hablemos de tu idea
           </Button>
         </TransitionView>
       </section>

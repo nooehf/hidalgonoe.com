@@ -13,7 +13,7 @@ export default function Footer() {
             noé hidalgo.
           </Link>
           <p className="mt-4 text-sm text-brand-muted font-sans leading-relaxed text-pretty">
-            Desarrollador Frontend Senior. Creo experiencias web sofisticadas, minimalistas y de alto rendimiento que transforman ideas de negocio en productos digitales de calidad mundial.
+            Estudiante de ADE & Creador Web. Fusiono la visión estratégica de negocio con el diseño digital premium y el desarrollo técnico a medida para potenciar marcas y negocios.
           </p>
         </div>
 
@@ -53,10 +53,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:nhidfer2711@gmail.com"
+                  href="mailto:noehidalgofernandez@gmail.com"
                   className="text-sm text-brand-muted hover:text-brand-text transition-colors"
                 >
-                  nhidfer2711@gmail.com
+                  noehidalgofernandez@gmail.com
                 </a>
               </li>
               <li>
@@ -71,7 +71,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/noé-hidalgo-fernández-67bb43231"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-brand-muted hover:text-brand-text transition-colors"

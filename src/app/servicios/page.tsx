@@ -14,46 +14,46 @@ interface Service {
 const services: Service[] = [
   {
     number: "01",
-    title: "Desarrollo Frontend con Next.js & React",
+    title: "Diseño & Desarrollo de Páginas Web",
     description:
-      "Arquitecturas modernas, seguras y de alto rendimiento adaptadas a productos digitales y aplicaciones complejas. Escalabilidad garantizada bajo TypeScript estricto.",
+      "Creación de sitios web personalizados desde cero. Código limpio, interfaces adaptadas perfectamente a dispositivos móviles y navegación intuitiva.",
     features: [
-      "Estructuración de Server Components (RSC) para cargas instantáneas",
-      "Modelado de estado global eficiente y modular (Zustand, Context API)",
-      "Código robusto, completamente tipado y fácil de mantener por equipos internos",
+      "Estructuras modernas de navegación para una experiencia fluida",
+      "Páginas totalmente responsivas que lucen perfectas en celulares y computadoras",
+      "Código optimizado para que tu sitio cargue de forma instantánea",
     ],
   },
   {
     number: "02",
-    title: "Landing Pages de Alta Conversión",
+    title: "Landing Pages Claras y Directas",
     description:
-      "Páginas de aterrizaje de altísima gama técnica y visual para startups y campañas corporativas exigentes. Foco absoluto en rendimiento de carga y pulcritud de UI.",
+      "Diseño de páginas de aterrizaje minimalistas pensadas para explicar tu proyecto o servicio sin rodeos, capturando el interés de tus visitantes de inmediato.",
     features: [
-      "Micro-interacciones interactivas diseñadas a medida con Framer Motion",
-      "Estructuras de embudo optimizadas con flujos de carga ultra-rápidos",
-      "SEO técnico y etiquetas open-graph impecables para indexación orgánica",
+      "Micro-interacciones dinámicas y sutiles hechas a medida con Framer Motion",
+      "Llamadas a la acción (CTA) claras y bien ubicadas para guiar la conversión",
+      "SEO técnico y configuración de metadatos básicos para aparecer en Google",
     ],
   },
   {
     number: "03",
-    title: "Sistemas de Diseño & Componentes UI",
+    title: "Diseño de Interfaces UX/UI",
     description:
-      "Construcción de bibliotecas de interfaces sólidas, accesibles y consistentes para unificar la identidad visual de todos los productos frontend de una compañía.",
+      "Definición visual equilibrada para tu marca. Apuesto por diseños limpios con abundante espacio en blanco, tipografías elegantes y una paleta de colores coherente.",
     features: [
-      "Cumplimiento riguroso de accesibilidad y estándares de contraste WCAG AA",
-      "Documentación detallada en Storybook para facilitar la adopción del equipo",
-      "Fácil integración con Tailwind CSS para personalizaciones ágiles",
+      "Diseño asimétrico y contemporáneo huyendo de plantillas prefabricadas",
+      "Estructuras visuales pensadas para guiar la lectura y retener al usuario",
+      "Controles interactivos accesibles e intuitivos para el visitante",
     ],
   },
   {
     number: "04",
-    title: "Integración de Headless CMS & Pasarelas",
+    title: "Integración de Herramientas Básicas",
     description:
-      "Conexión fluida de interfaces desacopladas de alto rendimiento con backends modernos, servicios de comercio headless y herramientas de negocio líderes.",
+      "Conexión de tu sitio web con herramientas sencillas y seguras de cobro, almacenamiento de datos o gestión de contenidos básicos.",
     features: [
-      "Integraciones con CMS Headless (Sanity, Contentful, Strapi)",
-      "Flujos de facturación e integraciones robustas con Stripe",
-      "Sincronización automatizada con plataformas analíticas e integraciones CRM (HubSpot)",
+      "Configuración de formularios directos a tu bandeja de correo",
+      "Vínculo de pasarelas de pago sencillas (botones de Stripe o PayPal)",
+      "Conexiones de almacenamiento y bases de datos ligeras",
     ],
   },
 ];
@@ -69,38 +69,26 @@ interface TimelineItem {
 const history: TimelineItem[] = [
   {
     period: "2024 - Presente",
-    role: "Desarrollador Frontend Senior & Consultor Independiente",
-    company: "Startups & Empresas Globales",
+    role: "Estudiante de Grado en ADE & Creador Web Freelance",
+    company: "Grado Universitario",
     description:
-      "Ayudo de forma externa a startups tecnológicas y marcas consolidadas a rediseñar y reconstruir su stack de frontend, optimizando el rendimiento web y unificando su sistema de diseño.",
+      "Combino mis estudios académicos diarios en administración de empresas con la programación y el diseño web a medida, ayudando a pequeños proyectos, marcas locales y emprendedores a tener presencia digital.",
     bullets: [
-      "Rearquitectura completa del panel de administración Zenith, reduciendo bundle size en un 99%.",
-      "Desarrollo del headless e-commerce para Aura Haute Couture, logrando un 100% en Lighthouse móvil.",
-      "Asesoramiento técnico en optimización SEO y estrategias avanzadas de almacenamiento en caché.",
+      "Aplicación de principios de marketing y análisis comercial al estructurar los contenidos web.",
+      "Desarrollo de páginas web y landing pages minimalistas orientadas a explicar propuestas de valor de forma clara.",
+      "Asesoramiento a proyectos en su fase inicial para digitalizar sus ideas de negocio sin complicaciones.",
     ],
   },
   {
-    period: "2022 - 2024",
-    role: "Líder Frontend / Lead Developer",
-    company: "InnovaTech Labs",
+    period: "2023 - Presente",
+    role: "Aprendizaje de Programación Web & Proyectos Experimentales",
+    company: "Estudio & Práctica Autodidacta",
     description:
-      "Lideré un equipo de 6 ingenieros enfocado en la modernización de los paneles SaaS internos de la empresa. Establecí estándares de calidad de código e inicié la migración a arquitecturas modernas.",
+      "Inicié de forma independiente mi camino en el diseño y la programación frontend. He estudiado de forma autónoma los estándares modernos de desarrollo y maquetación interactiva.",
     bullets: [
-      "Lideré el diseño e implementación de 'Pulse UI', reduciendo los tiempos de maquetado en un 40%.",
-      "Establecí flujos de testing visual en Storybook y flujos automatizados de CI/CD.",
-      "Reduje la tasa de errores de producción en un 28% gracias a la adopción de tipos estrictos en TypeScript.",
-    ],
-  },
-  {
-    period: "2020 - 2022",
-    role: "Ingeniero de Software Frontend",
-    company: "Skyward Media",
-    description:
-      "Desarrollé y mantuve interfaces interactivas para plataformas de streaming y medios digitales con alto tráfico diario. Optimicé recursos y animaciones dinámicas.",
-    bullets: [
-      "Implementé flujos de reproducción interactivos y paneles de estadísticas avanzados.",
-      "Reduje el tiempo de carga interactiva en un 35% en dispositivos móviles de gama media.",
-      "Colaboré estrechamente con el equipo de diseño UI/UX para pulir las interacciones clave de usuario.",
+      "Estudio de lenguajes clave: HTML5, CSS3, JavaScript moderno y el framework React.",
+      "Creación de prototipos funcionales y casos de estudio personales como e-commerce headless experimentales.",
+      "Desarrollo de habilidades de diseño de interfaces basadas en la consistencia tipográfica y el uso del espacio.",
     ],
   },
 ];
@@ -112,15 +100,15 @@ export default function Servicios() {
       <section className="max-w-3xl pt-10 md:pt-16">
         <TransitionView delay={0.1} yOffset={15}>
           <span className="font-display text-xs font-semibold uppercase tracking-widest text-brand-muted">
-            Servicios & CV
+            Mi Enfoque
           </span>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-text mt-4">
-            Especialización Frontend & Trayectoria Profesional
+            Estrategia de Negocio & Creación Web Premium
           </h1>
         </TransitionView>
         <TransitionView delay={0.2} yOffset={15}>
           <p className="mt-6 text-base sm:text-lg text-brand-muted font-sans leading-relaxed text-pretty">
-            Ofrezco soluciones de desarrollo que combinan sofisticación estética y excelencia de ingeniería. Mi enfoque está orientado a generar un retorno de inversión real para tu negocio a través de la velocidad y el refinamiento de la interfaz.
+            Ofrezco soluciones web sencillas, sofisticadas y bien pensadas. Al estudiar Administración y Dirección de Empresas (ADE), entiendo que una página web no es solo código técnico, sino una herramienta para comunicar, vender y dar credibilidad a tu proyecto.
           </p>
         </TransitionView>
       </section>
@@ -134,7 +122,7 @@ export default function Servicios() {
                 Mis Servicios
               </span>
               <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-brand-text mt-2 leading-tight">
-                Problemas reales que soluciono para tu empresa
+                En qué áreas puedo ayudarte a crecer
               </h2>
             </TransitionView>
           </div>
@@ -164,7 +152,7 @@ export default function Servicios() {
                   </p>
                   
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 pt-2">
-                    {service.features.map((feature, idx) => (
+                    {services[index].features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2.5 text-xs text-brand-muted">
                         <Check className="w-3.5 h-3.5 text-brand-text shrink-0 mt-0.5" />
                         <span>{feature}</span>
@@ -178,16 +166,16 @@ export default function Servicios() {
         </div>
       </section>
 
-      {/* Technical Skill Matrix (No percentage bars, just premium textual lists) */}
+      {/* Technical Skill Matrix */}
       <section className="border-t border-brand-border pt-16 sm:pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           <div className="lg:col-span-4">
             <TransitionView yOffset={15}>
               <span className="font-display text-xs font-semibold uppercase tracking-widest text-brand-muted">
-                Stack Tecnológico
+                Herramientas
               </span>
               <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-brand-text mt-2 leading-tight">
-                Herramientas que domino con soltura
+                Tecnologías con las que trabajo a diario
               </h2>
             </TransitionView>
           </div>
@@ -195,14 +183,13 @@ export default function Servicios() {
           <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
             <TransitionView yOffset={20} className="space-y-3">
               <h3 className="font-display text-sm font-bold text-brand-text uppercase tracking-wider flex items-center gap-2">
-                <Code className="w-4 h-4 text-brand-muted" /> Lenguajes
+                <Code className="w-4 h-4 text-brand-muted" /> Desarrollo
               </h3>
               <ul className="space-y-1.5 text-sm text-brand-muted font-sans">
-                <li>TypeScript (Avanzado)</li>
-                <li>JavaScript (ES6+)</li>
                 <li>HTML5 semántico</li>
                 <li>CSS3 y PostCSS</li>
-                <li>GraphQL / REST APIs</li>
+                <li>JavaScript moderno (ES6+)</li>
+                <li>TypeScript básico</li>
               </ul>
             </TransitionView>
 
@@ -211,40 +198,38 @@ export default function Servicios() {
                 <Briefcase className="w-4 h-4 text-brand-muted" /> Frameworks
               </h3>
               <ul className="space-y-1.5 text-sm text-brand-muted font-sans">
-                <li>React (RSC, Server Actions)</li>
+                <li>React (RSC)</li>
                 <li>Next.js (App Router)</li>
-                <li>Vite / Turbopack</li>
-                <li>Astro (SSG minimalista)</li>
-                <li>Node.js (Básico)</li>
+                <li>Astro (Páginas estáticas)</li>
+                <li>Vite / Git</li>
               </ul>
             </TransitionView>
 
             <TransitionView yOffset={20} delay={0.1} className="space-y-3">
               <h3 className="font-display text-sm font-bold text-brand-text uppercase tracking-wider flex items-center gap-2">
-                <GraduationCap className="w-4 h-4 text-brand-muted" /> Estilos & Animación
+                <GraduationCap className="w-4 h-4 text-brand-muted" /> Estilo & Movimiento
               </h3>
               <ul className="space-y-1.5 text-sm text-brand-muted font-sans">
                 <li>Tailwind CSS</li>
                 <li>Framer Motion</li>
-                <li>Radix UI Primitives</li>
-                <li>CSS Modules / Vanilla CSS</li>
-                <li>Tailwind CSS v4 Engine</li>
+                <li>Radix UI</li>
+                <li>CSS Modules</li>
               </ul>
             </TransitionView>
           </div>
         </div>
       </section>
 
-      {/* CV Career Path Timeline (Integrated & Minimalist) */}
+      {/* CV Career Path Timeline */}
       <section className="border-t border-brand-border pt-16 sm:pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           <div className="lg:col-span-4">
             <TransitionView yOffset={15}>
               <span className="font-display text-xs font-semibold uppercase tracking-widest text-brand-muted">
-                Historial Profesional
+                Mi Historia
               </span>
               <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-brand-text mt-2 leading-tight">
-                Trayectoria laboral y logros clave
+                Estudios y trayectoria digital
               </h2>
             </TransitionView>
           </div>
@@ -299,25 +284,25 @@ export default function Servicios() {
         <div className="relative z-10 flex flex-col items-center text-center space-y-6 sm:space-y-8 max-w-2xl mx-auto">
           <TransitionView yOffset={20}>
             <span className="font-display text-xs font-semibold uppercase tracking-widest opacity-60">
-              ¿Listo para potenciar tu equipo o producto?
+              ¿Quieres dar a conocer tu idea?
             </span>
           </TransitionView>
           
           <TransitionView yOffset={20} delay={0.1}>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
-              Llevemos tu frontend al siguiente nivel técnico
+              Construyamos tu espacio en internet
             </h2>
           </TransitionView>
 
           <TransitionView yOffset={20} delay={0.2}>
             <p className="text-sm sm:text-base opacity-75 font-sans leading-relaxed text-pretty">
-              Tanto si necesitas una consultoría técnica específica como un desarrollo integral desde cero, puedo aportarte la experiencia necesaria para garantizar un resultado de clase mundial.
+              Si buscas un sitio web que no solo sea visualmente sofisticado, sino que esté desarrollado bajo un criterio lógico, limpio y adaptado a tu presupuesto, hablemos hoy mismo.
             </p>
           </TransitionView>
 
           <TransitionView yOffset={20} delay={0.3} className="pt-2">
             <Button href="/contacto" variant="primary" className="bg-white text-brand-dark hover:bg-transparent hover:text-white border-white">
-              Agendar Entrevista
+              Ponte en contacto
             </Button>
           </TransitionView>
         </div>

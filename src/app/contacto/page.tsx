@@ -57,7 +57,7 @@ export default function Contacto() {
         </TransitionView>
         <TransitionView delay={0.2} yOffset={15}>
           <p className="mt-6 text-base sm:text-lg text-brand-muted font-sans leading-relaxed text-pretty">
-            ¿Tienes una idea que quieras hacer realidad o buscas un consultor frontend senior para optimizar tu plataforma actual? Rellena el formulario o envíame un correo directo. Responderé en menos de 24 horas hábiles.
+            ¿Tienes una idea que quieras hacer realidad o buscas una página web premium diseñada bajo criterios estratégicos de negocio? Rellena el formulario o envíame un correo directo. Responderé en menos de 24 horas hábiles.
           </p>
         </TransitionView>
       </section>
@@ -71,7 +71,7 @@ export default function Contacto() {
               Información de Contacto
             </h2>
             <p className="text-brand-muted text-sm sm:text-base font-sans leading-relaxed text-pretty">
-              Siempre estoy interesado en escuchar sobre nuevos desafíos técnicos, desarrollos de software innovadores y colaboraciones de marca personal de alto impacto.
+              Siempre estoy interesado en escuchar sobre nuevos proyectos de diseño web, digitalización comercial, lanzamientos de startups e ideas de negocio innovadoras.
             </p>
           </TransitionView>
 
@@ -84,10 +84,10 @@ export default function Contacto() {
                   Email Directo
                 </p>
                 <a
-                  href="mailto:nhidfer2711@gmail.com"
+                  href="mailto:noehidalgofernandez@gmail.com"
                   className="font-display text-sm font-semibold text-brand-text hover:underline transition-all"
                 >
-                  nhidfer2711@gmail.com
+                  noehidalgofernandez@gmail.com
                 </a>
               </div>
             </div>

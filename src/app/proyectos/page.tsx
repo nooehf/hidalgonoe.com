@@ -19,12 +19,12 @@ interface Project {
 const projects: Project[] = [
   {
     slug: "zenith",
-    title: "ZENITH: Rediseño Técnico y Dashboard Analítico",
+    title: "ZENITH: Mi reto de programación y dashboard interactivo",
     name: "ZENITH",
-    category: "Fintech SaaS Platform",
+    category: "Proyecto Personal / Práctica",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Recharts"],
     description:
-      "Completa rearquitectura y rediseño de interfaz de un panel analítico en tiempo real. Carga de datos optimizada reduciendo el bundle size en un 55% y acelerando el Time-to-Interactive (TTI) a 0.8 segundos.",
+      "Rediseño visual y técnico de un panel analítico en tiempo real. Creado como ejercicio avanzado de programación en Next.js para experimentar con optimización de datos y gráficos dinámicos sin congelar la UI.",
     caseStudyNumber: "01",
     bgColor: "bg-[#0b0f19]", // Deep navy/slate
     textColor: "text-white",
@@ -32,12 +32,12 @@ const projects: Project[] = [
   },
   {
     slug: "aura",
-    title: "AURA: E-commerce Headless para Alta Costura",
+    title: "AURA: E-commerce Headless de Práctica",
     name: "AURA",
-    category: "Luxury E-Commerce",
-    tags: ["Next.js", "Shopify Buy SDK", "GraphQL", "Tailwind CSS", "Stripe"],
+    category: "Caso de Estudio / Prototipo",
+    tags: ["Next.js", "Shopify API", "GraphQL", "Tailwind CSS", "Framer Motion"],
     description:
-      "Una experiencia de compra de alta costura digital con transiciones líquidas y carga instantánea. Conectada con headless Shopify, alcanzando un score de rendimiento móvil perfecto del 100% en Lighthouse.",
+      "Un prototipo de tienda virtual de moda de lujo creado para lograr navegación instantánea y transiciones de pantalla totalmente fluidas conectando Next.js con la API de Shopify.",
     caseStudyNumber: "02",
     bgColor: "bg-[#f5f2eb]", // Cream / Warm gray
     textColor: "text-brand-text",
@@ -45,12 +45,12 @@ const projects: Project[] = [
   },
   {
     slug: "pulse",
-    title: "PULSE: Sistema de Diseño e Interfaces de Monitoreo",
+    title: "PULSE: Biblioteca de Componentes Accesibles",
     name: "PULSE",
-    category: "Healthcare Technology",
+    category: "Investigación Personal / UI",
     tags: ["React", "TypeScript", "Tailwind CSS", "Storybook", "Framer Motion"],
     description:
-      "Creación e integración de un sistema de diseño modular de alta accesibilidad (WCAG AA) para visualización de métricas de pacientes críticos. Utilizado por más de 50 desarrolladores internos.",
+      "Creación y documentación de un conjunto modular de componentes interactivos y accesibles (cumpliendo WCAG AA) desarrollados con Tailwind CSS para utilizarlos en mis futuros proyectos.",
     caseStudyNumber: "03",
     bgColor: "bg-[#18181b]", // Pure Zinc Dark
     textColor: "text-white",
@@ -68,12 +68,12 @@ export default function Proyectos() {
             Mi Portafolio
           </span>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-text mt-4">
-            Casos de Éxito Seleccionados
+            Proyectos & Experimentos
           </h1>
         </TransitionView>
         <TransitionView delay={0.2} yOffset={15}>
           <p className="mt-6 text-base sm:text-lg text-brand-muted font-sans leading-relaxed text-pretty">
-            Proyectos elegidos minuciosamente por su alto grado de refinamiento técnico, excelencia visual y valor comercial medible. Sin relleno: solo trabajos reales que resolvieron desafíos complejos.
+            Una selección de los proyectos y prototipos que he diseñado y desarrollado de forma independiente. Representan mi aprendizaje práctico combinando diseño de interfaces limpias con código moderno.
           </p>
         </TransitionView>
       </section>
@@ -102,7 +102,7 @@ export default function Proyectos() {
 
                   <div className="relative z-10 flex justify-between items-start w-full">
                     <span className="font-display text-xs tracking-widest uppercase opacity-60">
-                      CASE STUDY / {project.caseStudyNumber}
+                      PROYECTO / {project.caseStudyNumber}
                     </span>
                     <span className="font-display text-xs tracking-wider border border-current/20 px-2.5 py-0.5 rounded-full uppercase">
                       {project.category}
@@ -165,7 +165,7 @@ export default function Proyectos() {
 
                 <div className="pt-4">
                   <Button href={`/proyectos/${project.slug}`} variant="secondary" showArrow>
-                    Ver Caso de Éxito
+                    Ver Detalles
                   </Button>
                 </div>
               </TransitionView>
@@ -178,15 +178,15 @@ export default function Proyectos() {
       <section className="border-t border-brand-border py-16 sm:py-24 text-center max-w-xl mx-auto space-y-6">
         <TransitionView yOffset={15}>
           <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-brand-text">
-            ¿Quieres ver tu producto digital aquí?
+            ¿Quieres que colaboremos en tu web?
           </h2>
           <p className="mt-3 text-sm text-brand-muted font-sans leading-relaxed text-pretty">
-            Analicemos los requerimientos de tu empresa o startup para estructurar una interfaz a medida que impulse conversiones de manera limpia y veloz.
+            Si tienes una idea, un pequeño negocio o un proyecto personal que necesite un espacio limpio en internet, ponte en contacto conmigo y lo construimos juntos.
           </p>
         </TransitionView>
         <TransitionView yOffset={15} delay={0.1} className="pt-2">
           <Button href="/contacto" variant="primary" showArrow>
-            Agendar una Consulta
+            Ponte en Contacto
           </Button>
         </TransitionView>
       </section>
