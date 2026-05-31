@@ -1,0 +1,123 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import Container from "./container";
+
+const navLinks = [
+  { name: "Inicio", href: "/" },
+  { name: "Proyectos", href: "/proyectos" },
+  { name: "Servicios & CV", href: "/servicios" },
+  { name: "Contacto", href: "/contacto" },
+];
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close mobile nav when pathname changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-brand-bg/85 backdrop-blur-md border-b border-brand-border py-4"
+          : "bg-transparent py-6"
+      }`}
+    >
+      <Container className="flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="group font-display text-lg font-bold tracking-tight text-brand-text">
+          <span className="relative">
+            noé hidalgo.
+            <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-brand-text transition-all duration-300 group-hover:w-full" />
+          </span>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative font-display text-sm tracking-tight transition-colors duration-300 ${
+                  isActive ? "text-brand-text font-semibold" : "text-brand-muted hover:text-brand-text"
+                }`}
+              >
+                {link.name}
+                {isActive && (
+                  <motion.span
+                    layoutId="activeNavIndicator"
+                    className="absolute -bottom-1 left-0 right-0 h-[1.5px] bg-brand-text"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Mobile Nav Toggle */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden p-1 text-brand-text hover:opacity-80 transition-opacity"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </button>
+      </Container>
+
+      {/* Mobile Menu Panel */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden bg-brand-bg border-b border-brand-border absolute top-full left-0 right-0 overflow-hidden"
+          >
+            <nav className="flex flex-col px-6 py-8 gap-5 border-t border-brand-border">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`font-display text-lg tracking-tight transition-colors ${
+                      isActive ? "text-brand-text font-bold" : "text-brand-muted"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
