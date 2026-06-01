@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
+import ChatWidget from "@/components/ui/chat-widget";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -45,6 +46,7 @@ export default function RootLayout({
         {/* Generous top margin to prevent nav overlap, keeping asymmetry and clean breathing room */}
         <main className="flex-grow pt-24 md:pt-32 pb-16">{children}</main>
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   );
