@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "./container";
+import OpenChatButton from "./open-chat-button";
 
 const navLinks = [
   { name: "Inicio", href: "/" },
@@ -77,6 +78,13 @@ export default function Navbar() {
               </Link>
             );
           })}
+          <OpenChatButton
+            variant="secondary"
+            className="text-[11px] sm:text-xs border-indigo-500/20 text-indigo-700 hover:border-indigo-500 hover:text-indigo-900 hover:bg-indigo-500/10 bg-indigo-500/5 py-1.5 px-3 flex items-center gap-1.5 rounded-none"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
+            Preguntar a mi IA
+          </OpenChatButton>
         </nav>
 
         {/* Mobile Nav Toggle */}
@@ -147,6 +155,15 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+              <div className="pt-2">
+                <OpenChatButton
+                  variant="secondary"
+                  className="w-full justify-center border-indigo-500/20 text-indigo-700 hover:border-indigo-500 hover:text-indigo-900 bg-indigo-500/5 py-2.5 px-4 flex items-center gap-2 rounded-none"
+                >
+                  <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+                  Preguntar a mi IA
+                </OpenChatButton>
+              </div>
             </nav>
           </motion.div>
         )}

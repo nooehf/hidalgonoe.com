@@ -48,34 +48,6 @@ const projects: Project[] = [
     textColor: "text-white",
     borderColor: "border-slate-950/20",
   },
-  {
-    slug: "aura",
-    title: "AURA: E-commerce Headless de Práctica",
-    name: "AURA",
-    category: "Caso de Estudio / Prototipo",
-    tags: ["Next.js", "Shopify API", "GraphQL", "Tailwind CSS", "Framer Motion"],
-    description:
-      "Un prototipo de tienda virtual de moda de lujo creado para lograr navegación instantánea y transiciones de pantalla totalmente fluidas conectando Next.js con la API de Shopify.",
-    cardTagline: "Navegación instantánea de alta gama y transiciones de página fluidas mediante Shopify API.",
-    caseStudyNumber: "03",
-    bgColor: "bg-[#f5f2eb]", // Cream / Warm gray
-    textColor: "text-brand-text",
-    borderColor: "border-brand-dark/10",
-  },
-  {
-    slug: "pulse",
-    title: "PULSE: Biblioteca de Componentes Accesibles",
-    name: "PULSE",
-    category: "Investigación Personal / UI",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Storybook", "Framer Motion"],
-    description:
-      "Creación y documentación de un conjunto modular de componentes interactivos y accesibles (cumpliendo WCAG AA) desarrollados con Tailwind CSS para utilizarlos en mis futuros proyectos.",
-    cardTagline: "Biblioteca modular interactiva y accesible bajo estándares normativos WCAG AA.",
-    caseStudyNumber: "04",
-    bgColor: "bg-[#18181b]", // Pure Zinc Dark
-    textColor: "text-white",
-    borderColor: "border-white/10",
-  },
 ];
 
 export default function Proyectos() {

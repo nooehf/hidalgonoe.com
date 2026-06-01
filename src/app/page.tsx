@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "@/components/ui/container";
 import Button from "@/components/ui/button";
 import TransitionView from "@/components/ui/transition-view";
+import OpenChatButton from "@/components/ui/open-chat-button";
 
 export default function Home() {
   return (
@@ -34,13 +35,16 @@ export default function Home() {
             </p>
           </TransitionView>
 
-          <TransitionView delay={0.4} yOffset={25} className="mt-10 sm:mt-12 flex flex-wrap gap-4">
+          <TransitionView delay={0.4} yOffset={25} className="mt-10 sm:mt-12 flex flex-wrap gap-4 items-center">
             <Button href="/contacto" variant="primary" showArrow>
               ¿Hablamos?
             </Button>
             <Button href="/proyectos" variant="secondary">
               Ver Proyectos
             </Button>
+            <OpenChatButton variant="secondary" className="border-indigo-500/20 text-indigo-700 hover:border-indigo-500 hover:text-indigo-900 bg-indigo-500/5">
+              Preguntar a mi IA
+            </OpenChatButton>
           </TransitionView>
         </div>
 

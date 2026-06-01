@@ -5,6 +5,7 @@ import Container from "@/components/ui/container";
 import Button from "@/components/ui/button";
 import TransitionView from "@/components/ui/transition-view";
 import { Mail, Send, CheckCircle2 } from "lucide-react";
+import OpenChatButton from "@/components/ui/open-chat-button";
 
 export default function Contacto() {
   const [formState, setFormState] = useState({
@@ -73,6 +74,11 @@ export default function Contacto() {
             <p className="text-brand-muted text-sm sm:text-base font-sans leading-relaxed text-pretty">
               Siempre estoy interesado en escuchar sobre nuevos proyectos de diseño web, digitalización comercial, lanzamientos de startups e ideas de negocio innovadoras.
             </p>
+            <div className="pt-2">
+              <OpenChatButton variant="secondary" className="w-full sm:w-auto border-indigo-500/20 text-indigo-700 hover:border-indigo-500 hover:text-indigo-900 bg-indigo-500/5">
+                Hablar con mi Asistente de IA
+              </OpenChatButton>
+            </div>
           </TransitionView>
 
           {/* Details list card */}

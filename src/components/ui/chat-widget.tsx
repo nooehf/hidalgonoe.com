@@ -9,6 +9,22 @@ interface Message {
   content: string;
 }
 
+const formatMessageContent = (content: string) => {
+  if (!content) return "";
+  // Split by '**' patterns to toggle bold formatting
+  const parts = content.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, index) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={index} className="font-bold text-brand-text dark:text-zinc-900">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+};
+
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -24,6 +40,10 @@ export default function ChatWidget() {
         content: "¡Hola! Escribe sobre tu idea de negocio o hazme cualquier pregunta sobre Noé. Estaré encantado de resolver tus dudas al instante.",
       },
     ]);
+
+    const handleOpenChat = () => setIsOpen(true);
+    window.addEventListener("open-nh-chat", handleOpenChat);
+    return () => window.removeEventListener("open-nh-chat", handleOpenChat);
   }, []);
 
   // Auto-scroll to the bottom of the chat log when messages list changes
@@ -139,7 +159,7 @@ export default function ChatWidget() {
                           : "bg-brand-dark text-white"
                       }`}
                     >
-                      <p className="whitespace-pre-line">{msg.content}</p>
+                      <p className="whitespace-pre-line">{formatMessageContent(msg.content)}</p>
                     </div>
                   </div>
                 );

@@ -110,91 +110,13 @@ const caseStudies: Record<string, CaseStudy> = {
       "Lógica de asignación de puntos y modelado de reservas/stock en construcción activa.",
       "Repositorio abierto en GitHub para asegurar un seguimiento público y transparente de los avances."
     ]
-  },
-  aura: {
-    slug: "aura",
-    name: "AURA",
-    category: "Luxury E-Commerce Mockup",
-    client: "Proyecto de Aprendizaje",
-    date: "Noviembre 2025",
-    role: "Diseño UX/UI & Desarrollo",
-    tags: ["Next.js", "Shopify API", "GraphQL", "Tailwind CSS", "Framer Motion"],
-    bannerBg: "bg-[#f5f2eb]",
-    bannerBorder: "border-brand-dark/10",
-    tagline: "Un e-commerce headless de alta moda creado para experimentar con transiciones fluidas de imágenes y navegación líquida.",
-    
-    problemText: "Me apasiona la moda y el diseño editorial. Quería comprobar si era posible crear un sitio web de comercio electrónico que se sintiera tan elegante y fluido como hojear una revista física. Las plantillas web tradicionales suelen ser rígidas y lentas, y quería retarme a lograr transiciones sin cortes visuales.",
-    problemDetails: [
-      "Reto de evitar saltos de pantalla bruscos al navegar entre productos.",
-      "Búsqueda de una estética visual limpia y asimétrica de alto nivel.",
-      "Optimización de imágenes pesadas de alta calidad sin perder resolución."
-    ],
-    
-    solutionText: "Propuse una arquitectura de frontend independiente conectada a la API de Shopify mediante GraphQL. Diseñé transiciones de página dinámicas usando Framer Motion para que el usuario sienta una navegación continua, logrando que las imágenes se muevan suavemente de una vista a otra al seleccionarlas.",
-    solutionDetails: [
-      "Uso de animaciones de diseño compartido (Shared Layout) entre listas y detalles.",
-      "Implementación de pre-carga inteligente para que las páginas de producto carguen al instante.",
-      "Layout minimalista refinado con tipografías proporcionales y amplio espacio."
-    ],
-    
-    resultText: "Logré crear un prototipo funcional precioso que se siente alive. Es el ejemplo ideal de cómo el diseño y el código pueden unirse para crear una experiencia memorable.",
-    resultStats: [
-      { label: "Transición de Páginas", value: "180 ms" },
-      { label: "Tiempo de Carga", value: "<0.3s" },
-      { label: "Optimización Visual", value: "100%" }
-    ],
-    resultDetails: [
-      "Navegación instantánea eliminando esperas y pantallas en blanco.",
-      "Puntuación perfecta de rendimiento en dispositivos móviles.",
-      "Dominio práctico en la maquetación de layouts de alta gama estética."
-    ]
-  },
-  pulse: {
-    slug: "pulse",
-    name: "PULSE",
-    category: "Design System Experiment",
-    client: "Investigación Personal",
-    date: "Agosto 2025",
-    role: "Diseño & Accesibilidad",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Storybook", "Framer Motion"],
-    bannerBg: "bg-[#18181b]",
-    bannerBorder: "border-white/10",
-    tagline: "Creación de un kit de componentes modulares y estructurados enfocado en la accesibilidad web (WCAG).",
-    
-    problemText: "Quería entender a fondo cómo las agencias y equipos de desarrollo profesional construyen sus librerías de componentes internos para mantener la coherencia en sus proyectos. Además, quería investigar cómo hacer que un panel de control interactivo fuera realmente accesible para usuarios que navegan bajo condiciones especiales.",
-    problemDetails: [
-      "Falta de coherencia visual al diseñar componentes de interfaz de forma aislada.",
-      "Reto de integrar soporte de navegación fluido por teclado sin usar ratón.",
-      "Investigar y cumplir normativas de contraste de color y lectores de pantalla."
-    ],
-    
-    solutionText: "Construí 'Pulse UI', un conjunto de componentes reutilizables (botones, modales, alertas y menús) usando Tailwind CSS. Documenté todos los estados en Storybook e implementé patrones semánticos rigurosos de accesibilidad, asegurando un contraste perfecto y total usabilidad de teclado.",
-    solutionDetails: [
-      "Desarrollo modular de bloques tipados con TypeScript.",
-      "Integración de pruebas visuales y documentación interactiva de interfaz.",
-      "Optimización de animaciones de retroalimentación sutil para el usuario."
-    ],
-    
-    resultText: "Un kit de componentes modular sumamente consistente que ahora utilizo como base sólida para acelerar el desarrollo de todas mis nuevas páginas web.",
-    resultStats: [
-      { label: "Componentes Creados", value: "25+" },
-      { label: "Soporte de Teclado", value: "100%" },
-      { label: "Normas WCAG AA", value: "Cumplidas" }
-    ],
-    resultDetails: [
-      "Estructuración de componentes fáciles de reutilizar en múltiples proyectos.",
-      "Accesibilidad nativa integrada desde el primer día.",
-      "Flujo de trabajo unificado y limpio para maquetaciones veloces."
-    ]
   }
 };
 
 export async function generateStaticParams() {
   return [
     { slug: "energialeon" },
-    { slug: "mylocalcommerce" },
-    { slug: "aura" },
-    { slug: "pulse" }
+    { slug: "mylocalcommerce" }
   ];
 }
 

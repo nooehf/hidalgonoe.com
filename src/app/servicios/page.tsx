@@ -3,6 +3,7 @@ import Container from "@/components/ui/container";
 import Button from "@/components/ui/button";
 import TransitionView from "@/components/ui/transition-view";
 import { Check } from "lucide-react";
+import OpenChatButton from "@/components/ui/open-chat-button";
 
 interface Service {
   number: string;
@@ -75,6 +76,11 @@ export default function Servicios() {
           <p className="mt-6 text-base sm:text-lg text-brand-muted font-sans leading-relaxed text-pretty">
             Ofrezco soluciones sencillas, sofisticadas y bien estructuradas. Al estudiar Administración y Dirección de Empresas (ADE), entiendo que una web no es solo código técnico, sino una herramienta comercial estratégica para comunicar tu propuesta de valor, generar confianza y atraer clientes.
           </p>
+        </TransitionView>
+        <TransitionView delay={0.3} yOffset={15} className="mt-8 flex flex-wrap gap-4">
+          <OpenChatButton variant="secondary" className="border-indigo-500/20 text-indigo-700 hover:border-indigo-500 hover:text-indigo-900 bg-indigo-500/5">
+            Preguntar a mi IA
+          </OpenChatButton>
         </TransitionView>
       </section>
 
@@ -154,10 +160,13 @@ export default function Servicios() {
             </p>
           </TransitionView>
 
-          <TransitionView yOffset={20} delay={0.3} className="pt-2">
+          <TransitionView yOffset={20} delay={0.3} className="pt-2 flex flex-wrap gap-4 justify-center">
             <Button href="/contacto" variant="primary" className="bg-white text-brand-dark hover:bg-transparent hover:text-white border-white">
               Ponte en contacto
             </Button>
+            <OpenChatButton variant="secondary" className="border-white/20 text-white hover:border-white hover:bg-white/10">
+              Chatear con mi IA
+            </OpenChatButton>
           </TransitionView>
         </div>
       </section>
