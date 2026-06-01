@@ -114,41 +114,43 @@ export default function Proyectos() {
                   isEven ? "lg:order-1" : "lg:order-2"
                 }`}
               >
-                <div
-                  className={`${project.bgColor} ${project.textColor} aspect-[1.1/1] sm:aspect-[16/10] flex flex-col justify-between p-6 sm:p-12 relative overflow-hidden group select-none cursor-pointer border ${project.borderColor}`}
-                >
-                  {/* Grid Background details */}
-                  <div className="absolute inset-0 opacity-5 pointer-events-none bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:28px_28px]" />
+                <Link href={`/proyectos/${project.slug}`} className="block group">
+                  <div
+                    className={`${project.bgColor} ${project.textColor} aspect-[1.1/1] sm:aspect-[16/10] flex flex-col justify-between p-6 sm:p-12 relative overflow-hidden select-none cursor-pointer border ${project.borderColor}`}
+                  >
+                    {/* Grid Background details */}
+                    <div className="absolute inset-0 opacity-5 pointer-events-none bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:28px_28px]" />
 
-                  <div className="relative z-10 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 w-full items-start">
-                    <span className="font-display text-xs tracking-widest uppercase opacity-60">
-                      PROYECTO / {project.caseStudyNumber}
-                    </span>
-                    <span className="font-display text-[10px] sm:text-xs tracking-wider border border-current/20 px-2.5 py-0.5 rounded-full uppercase max-w-fit">
-                      {project.category}
-                    </span>
-                  </div>
-
-                  <div className="relative z-10 my-auto py-4 sm:py-8">
-                    <h3 className="font-display text-3xl sm:text-6xl font-bold tracking-tighter mb-3 leading-none">
-                      {project.name}.
-                    </h3>
-                    <p className="text-xs sm:text-base opacity-75 font-sans max-w-md">
-                      {project.cardTagline}
-                    </p>
-                  </div>
-
-                  <div className="relative z-10 flex justify-between items-end w-full border-t border-current/10 pt-4">
-                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-[10px] sm:text-xs font-mono opacity-50">
-                      {project.tags.slice(0, 3).map((t) => (
-                        <span key={t}>{t.toUpperCase()}</span>
-                      ))}
+                    <div className="relative z-10 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 w-full items-start">
+                      <span className="font-display text-xs tracking-widest uppercase opacity-60">
+                        PROYECTO / {project.caseStudyNumber}
+                      </span>
+                      <span className="font-display text-[10px] sm:text-xs tracking-wider border border-current/20 px-2.5 py-0.5 rounded-full uppercase max-w-fit">
+                        {project.category}
+                      </span>
                     </div>
-                    <span className="text-xs font-display font-medium tracking-tight border-b border-current/30 group-hover:border-current transition-colors">
-                      VER DETALLES
-                    </span>
+
+                    <div className="relative z-10 my-auto py-4 sm:py-8">
+                      <h3 className="font-display text-3xl sm:text-6xl font-bold tracking-tighter mb-3 leading-none">
+                        {project.name}.
+                      </h3>
+                      <p className="text-xs sm:text-base opacity-75 font-sans max-w-md">
+                        {project.cardTagline}
+                      </p>
+                    </div>
+
+                    <div className="relative z-10 flex justify-between items-end w-full border-t border-current/10 pt-4">
+                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-[10px] sm:text-xs font-mono opacity-50">
+                        {project.tags.slice(0, 3).map((t) => (
+                          <span key={t}>{t.toUpperCase()}</span>
+                        ))}
+                      </div>
+                      <span className="text-xs font-display font-medium tracking-tight border-b border-current/30 group-hover:border-current transition-colors">
+                        VER PROYECTO
+                      </span>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </TransitionView>
 
               {/* Text Description Block */}
