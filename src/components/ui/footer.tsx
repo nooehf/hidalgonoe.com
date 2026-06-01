@@ -66,12 +66,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/nooehf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+34644215725"
                   className="text-sm text-brand-muted hover:text-brand-text transition-colors"
                 >
-                  GitHub
+                  +34 644 21 57 25
                 </a>
               </li>
               <li>
@@ -92,9 +90,6 @@ export default function Footer() {
       <Container className="pt-8 mt-12 border-t border-brand-border flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-xs text-brand-muted font-sans">
           &copy; {currentYear} Noé Hidalgo. Todos los derechos reservados.
-        </p>
-        <p className="text-xs text-brand-muted font-sans">
-          Diseñado y desarrollado a mano con Next.js y Tailwind CSS.
         </p>
       </Container>
     </footer>

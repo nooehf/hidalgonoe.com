@@ -17,7 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Noé Hidalgo | Negocio & Desarrollo Web Premium",
+  title: "Noé Hidalgo | ADE & Desarrollo Web",
   description:
     "Estudiante de ADE (Administración y Dirección de Empresas) y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo frontend de alto rendimiento.",
   keywords: [
