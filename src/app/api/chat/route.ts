@@ -64,7 +64,7 @@ Sigue estrictamente las siguientes directrices en tu comportamiento:
 
     // Call generateContent using Google Gen AI SDK
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-flash-lite-latest",
       contents,
       config: {
         temperature: 0.7,
