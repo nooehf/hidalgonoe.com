@@ -90,7 +90,7 @@ export default function Home() {
         <TransitionView yOffset={30} className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Typographic Visual Container */}
           <Link href="/proyectos/energialeon" className="lg:col-span-7 block group">
-            <div className="bg-[#0d2a1b] text-brand-bg aspect-video flex flex-col justify-between p-8 sm:p-12 relative overflow-hidden select-none cursor-pointer border border-white/5">
+            <div className="bg-[#0d2a1b] text-brand-bg aspect-[1.1/1] sm:aspect-[16/10] lg:aspect-video flex flex-col justify-between p-6 sm:p-12 relative overflow-hidden select-none cursor-pointer border border-white/5">
               <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]" />
               
               <div className="relative z-10 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 w-full items-start">
@@ -102,7 +102,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="relative z-10 my-auto py-8">
+              <div className="relative z-10 my-auto py-4 sm:py-8">
                 <h3 className="font-display text-4xl sm:text-6xl font-bold tracking-tighter mb-4 text-white leading-none">
                   ENERGÍA LEÓN.
                 </h3>
@@ -112,7 +112,7 @@ export default function Home() {
               </div>
 
               <div className="relative z-10 flex justify-between items-end w-full border-t border-white/10 pt-4">
-                <div className="flex gap-4 text-xs font-mono opacity-50">
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-[10px] sm:text-xs font-mono opacity-50">
                   <span>HTML5</span>
                   <span>TAILWIND</span>
                   <span>JAVASCRIPT</span>
