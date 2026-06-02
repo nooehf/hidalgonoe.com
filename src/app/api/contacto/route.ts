@@ -15,37 +15,62 @@ export async function POST(request: Request) {
       );
     }
 
-    // 1. Enviar correo de notificación a Noé
+    // 1. Enviar correo de notificación a Noé (Diseño Centrado Premium)
     const notificationResult = await resend.emails.send({
       from: "Portfolio Contacto <onboarding@resend.dev>",
       to: "noehidalgofernandez@gmail.com",
-      subject: `Nuevo mensaje de contacto de ${name}`,
+      subject: `Nuevo contacto: ${name}`,
       replyTo: email,
       html: `
-        <div style="font-family: sans-serif; background-color: #0f172a; color: #f1f5f9; max-width: 600px; margin: 0 auto; padding: 32px; border: 1px solid #1e293b; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);">
-          <h2 style="color: #6366f1; border-bottom: 1px solid #1e293b; padding-bottom: 16px; margin-top: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.5px;">💼 Nuevo Contacto en tu Portfolio</h2>
-          <p style="color: #94a3b8; font-size: 14px; margin-top: 16px; line-height: 1.6;">Has recibido una nueva consulta de un cliente potencial a través del formulario de contacto.</p>
-          <table style="width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px;">
-            <tr>
-              <td style="padding: 10px 0; color: #94a3b8; width: 140px; font-weight: 600;">Nombre:</td>
-              <td style="padding: 10px 0; color: #f1f5f9; font-weight: bold;">${name}</td>
-            </tr>
-            <tr>
-              <td style="padding: 10px 0; color: #94a3b8; font-weight: 600;">Email:</td>
-              <td style="padding: 10px 0;"><a href="mailto:${email}" style="color: #6366f1; text-decoration: none; font-weight: bold;">${email}</a></td>
-            </tr>
-            <tr>
-              <td style="padding: 10px 0; color: #94a3b8; font-weight: 600;">Empresa:</td>
-              <td style="padding: 10px 0; color: #f1f5f9;">${company || "No especificada"}</td>
-            </tr>
-          </table>
-          <div style="margin-top: 28px;">
-            <p style="color: #94a3b8; font-size: 14px; font-weight: 600; margin-bottom: 12px;">Mensaje recibido:</p>
-            <div style="white-space: pre-wrap; padding: 20px; background-color: #1e293b; border-radius: 8px; border-left: 4px solid #6366f1; color: #f1f5f9; font-size: 14px; line-height: 1.6;">${message}</div>
+        <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fafafa; padding: 60px 20px; margin: 0; text-align: center;">
+          <!-- Google Fonts Import -->
+          <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+          
+          <div style="max-width: 520px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e4e4e7; padding: 48px; border-radius: 0px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01); text-align: center;">
+            
+            <!-- Logo Header -->
+            <div style="margin-bottom: 40px; text-align: center;">
+              <a href="https://www.hidalgonoe.com" style="text-decoration: none; font-size: 18px; font-weight: 700; color: #09090b; letter-spacing: -0.5px; font-family: 'Outfit', -apple-system, sans-serif; display: inline-block;">noé hidalgo.</a>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h2 style="font-size: 26px; font-weight: 800; color: #09090b; letter-spacing: -0.8px; margin: 0 0 6px 0; font-family: 'Outfit', -apple-system, sans-serif; text-align: center;">💼 Nuevo Lead Registrado</h2>
+            <p style="font-size: 10px; font-weight: 600; color: #71717a; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 40px 0; font-family: 'Outfit', -apple-system, sans-serif; text-align: center;">Ficha de contacto de la web</p>
+
+            <!-- Table of Fields (Centered content) -->
+            <div style="margin: 0 auto 32px auto; max-width: 400px; text-align: left; border-top: 1px solid #f4f4f5;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #09090b; font-family: 'Inter', sans-serif;">
+                <tr style="border-bottom: 1px solid #f4f4f5;">
+                  <td style="padding: 14px 0; color: #71717a; width: 100px; font-weight: 500;">Nombre</td>
+                  <td style="padding: 14px 0; font-weight: 600; color: #09090b; text-align: right;">${name}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f4f4f5;">
+                  <td style="padding: 14px 0; color: #71717a; font-weight: 500;">Email</td>
+                  <td style="padding: 14px 0; text-align: right;"><a href="mailto:${email}" style="color: #09090b; text-decoration: underline; font-weight: 600;">${email}</a></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f4f4f5;">
+                  <td style="padding: 14px 0; color: #71717a; font-weight: 500;">Empresa</td>
+                  <td style="padding: 14px 0; color: #09090b; text-align: right;">${company || "No especificada"}</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- Message Block -->
+            <div style="background-color: #fafafa; border: 1px solid #e4e4e7; padding: 24px; margin: 32px auto; max-width: 440px; text-align: center;">
+              <p style="margin: 0 0 8px 0; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #71717a; font-weight: 600; font-family: 'Outfit', sans-serif;">Mensaje</p>
+              <div style="white-space: pre-wrap; font-size: 14px; color: #09090b; line-height: 1.6; font-style: italic; font-family: 'Inter', sans-serif; display: inline-block; text-align: left; width: 100%;">"${message}"</div>
+            </div>
+
+            <!-- Action Button to Reply -->
+            <div style="margin-top: 32px; margin-bottom: 16px;">
+              <a href="mailto:${email}" style="background-color: #09090b; color: #ffffff; text-decoration: none; padding: 12px 28px; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; display: inline-block; border-radius: 0px; font-family: 'Outfit', sans-serif;">Responder al Correo</a>
+            </div>
+
+            <!-- Footer matching site style -->
+            <div style="margin-top: 48px; border-top: 1px solid #e4e4e7; padding-top: 24px; font-size: 10px; color: #a1a1aa; text-align: center; font-family: 'Inter', sans-serif; letter-spacing: 0.5px;">
+              Mensaje automático enviado desde <a href="https://www.hidalgonoe.com" style="color: #71717a; text-decoration: underline;">hidalgonoe.com</a>
+            </div>
           </div>
-          <footer style="margin-top: 40px; border-top: 1px solid #1e293b; padding-top: 20px; font-size: 11px; color: #64748b; text-align: center;">
-            Mensaje automático enviado desde hidalgonoe.com
-          </footer>
         </div>
       `,
     });
@@ -54,38 +79,80 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: notificationResult.error.message }, { status: 500 });
     }
 
-    // 2. Enviar correo de confirmación al usuario (Graceful/Tolerante a sandbox)
-    // El dominio onboarding@resend.dev en la cuenta gratuita de Resend solo permite enviar al correo del dueño.
-    // Si falla por restricciones del sandbox de Resend, se registra en consola pero se devuelve éxito igualmente.
+    // 2. Enviar correo de confirmación al usuario (Diseño Centrado Premium)
     try {
       await resend.emails.send({
         from: "Noé Hidalgo <onboarding@resend.dev>",
         to: email,
-        subject: `Gracias por contactarme, ${name}`,
+        subject: `He recibido tu mensaje, ${name}`,
         html: `
-          <div style="font-family: sans-serif; background-color: #0f172a; color: #f1f5f9; max-width: 600px; margin: 0 auto; padding: 32px; border: 1px solid #1e293b; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);">
-            <div style="text-align: center; margin-bottom: 24px;">
-              <h2 style="color: #6366f1; margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.5px;">¡Hola, ${name}!</h2>
-              <p style="color: #94a3b8; font-size: 14px; margin-top: 8px; margin-bottom: 0;">He recibido tu mensaje con éxito</p>
-            </div>
-            <hr style="border: 0; border-top: 1px solid #1e293b; margin: 20px 0;" />
-            <p style="font-size: 14px; line-height: 1.7; color: #cbd5e1; margin-bottom: 16px;">
-              Muchas gracias por ponerte en contacto conmigo a través de mi portfolio. Valoro enormemente tu interés en que colaboremos juntos.
-            </p>
-            <p style="font-size: 14px; line-height: 1.7; color: #cbd5e1; margin-bottom: 20px;">
-              Estoy revisando los detalles de tu consulta y <strong>me comunicaré contigo en menos de 24 horas hábiles</strong> para darte una respuesta detallada o coordinar una breve llamada de valoración.
-            </p>
-            <div style="background-color: #1e293b; border-radius: 8px; padding: 20px; margin: 24px 0; border-left: 4px solid #6366f1;">
-              <p style="margin: 0; font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 8px;">Copia de tu consulta:</p>
-              <div style="white-space: pre-wrap; font-size: 13px; color: #e2e8f0; font-style: italic; line-height: 1.5;">"${message}"</div>
-            </div>
-            <p style="font-size: 14px; line-height: 1.7; color: #cbd5e1; margin-bottom: 30px;">
-              Mientras tanto, puedes echar un vistazo a mis últimos trabajos en mi <a href="https://www.hidalgonoe.com/proyectos" style="color: #6366f1; text-decoration: none; font-weight: 600;">sección de proyectos</a> o conectar conmigo en <a href="https://www.linkedin.com/in/no%C3%A9-hidalgo-fern%C3%A1ndez-67bb43231" style="color: #6366f1; text-decoration: none; font-weight: 600;">LinkedIn</a>.
-            </p>
-            <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid #1e293b; font-size: 13px; color: #94a3b8;">
-              <p style="margin: 0; font-weight: bold; color: #f1f5f9;">Noé Hidalgo</p>
-              <p style="margin: 4px 0 0 0; font-size: 12px;">Estudiante de ADE & Desarrollador Full-Stack</p>
-              <p style="margin: 2px 0 0 0; font-size: 12px;"><a href="https://www.hidalgonoe.com" style="color: #6366f1; text-decoration: none;">www.hidalgonoe.com</a></p>
+          <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fafafa; padding: 60px 20px; margin: 0; text-align: center;">
+            <!-- Google Fonts Import -->
+            <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+            
+            <div style="max-width: 520px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e4e4e7; padding: 48px; border-radius: 0px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01); text-align: center;">
+              
+              <!-- Header Logo matching Navbar -->
+              <div style="margin-bottom: 40px; text-align: center;">
+                <a href="https://www.hidalgonoe.com" style="text-decoration: none; font-size: 18px; font-weight: 700; color: #09090b; letter-spacing: -0.5px; font-family: 'Outfit', -apple-system, sans-serif; display: inline-block;">noé hidalgo.</a>
+              </div>
+
+              <!-- Greeting & Subtext -->
+              <h2 style="font-size: 28px; font-weight: 800; color: #09090b; letter-spacing: -0.8px; margin: 0 0 6px 0; font-family: 'Outfit', -apple-system, sans-serif; text-align: center;">¡Hola, ${name}!</h2>
+              <p style="font-size: 10px; font-weight: 600; color: #71717a; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 32px 0; font-family: 'Outfit', -apple-system, sans-serif; text-align: center;">Mensaje recibido con éxito</p>
+
+              <!-- Body Copy (Centered and readable) -->
+              <div style="max-width: 440px; margin: 0 auto; text-align: center; font-family: 'Inter', sans-serif;">
+                <p style="font-size: 15px; line-height: 1.8; color: #18181b; margin: 0 0 16px 0;">
+                  Muchas gracias por ponerte en contacto conmigo a través de mi portfolio. Valoro enormemente tu interés en que colaboremos juntos.
+                </p>
+                <p style="font-size: 15px; line-height: 1.8; color: #18181b; margin: 0 0 32px 0;">
+                  Estoy revisando los detalles de tu consulta y <strong>me comunicaré contigo en menos de 24 horas hábiles</strong> para darte una respuesta detallada o coordinar una breve llamada de valoración.
+                </p>
+              </div>
+
+              <!-- Minimalist Centered Quote Box for Lead Reference -->
+              <div style="background-color: #fafafa; border: 1px solid #e4e4e7; padding: 24px; margin: 32px auto; max-width: 440px; text-align: center;">
+                <p style="margin: 0 0 8px 0; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #71717a; font-weight: 600; font-family: 'Outfit', sans-serif;">Copia de tu consulta</p>
+                <div style="white-space: pre-wrap; font-size: 14px; color: #09090b; line-height: 1.6; font-style: italic; font-family: 'Inter', sans-serif; display: inline-block;">"${message}"</div>
+              </div>
+
+              <!-- Closing CTA Centered Link -->
+              <div style="margin-top: 32px; margin-bottom: 24px; text-align: center; font-family: 'Inter', sans-serif;">
+                <p style="font-size: 14px; color: #71717a; margin-bottom: 16px; margin-top: 0;">¿Quieres echar un vistazo a mis últimos trabajos mientras tanto?</p>
+                <a href="https://www.hidalgonoe.com/proyectos" style="background-color: #09090b; color: #ffffff; text-decoration: none; padding: 12px 28px; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; display: inline-block; border-radius: 0px; font-family: 'Outfit', sans-serif;">Ver Proyectos</a>
+              </div>
+
+              <!-- Center Social/Contact Bar -->
+              <div style="margin-top: 40px; margin-bottom: 24px; text-align: center; font-family: 'Inter', sans-serif;">
+                <p style="margin: 0 0 16px 0; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #71717a; font-weight: 600; font-family: 'Outfit', sans-serif;">o contacta conmigo directamente</p>
+                <div style="display: inline-block; text-align: center; line-height: 24px;">
+                  
+                  <!-- WhatsApp -->
+                  <a href="https://wa.me/34644215725" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: inline-block; margin: 0 16px; vertical-align: middle;">
+                    <img src="https://img.icons8.com/material-outlined/24/09090b/whatsapp.png" alt="WhatsApp" width="20" height="20" style="display: block; border: 0;" />
+                  </a>
+
+                  <!-- Email -->
+                  <a href="mailto:noehidalgofernandez@gmail.com" style="text-decoration: none; display: inline-block; margin: 0 16px; vertical-align: middle;">
+                    <img src="https://img.icons8.com/material-outlined/24/09090b/mail.png" alt="Email" width="20" height="20" style="display: block; border: 0;" />
+                  </a>
+
+                  <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/no%C3%A9-hidalgo-fern%C3%A1ndez-67bb43231" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: inline-block; margin: 0 16px; vertical-align: middle;">
+                    <img src="https://img.icons8.com/material-outlined/24/09090b/linkedin--v1.png" alt="LinkedIn" width="20" height="20" style="display: block; border: 0;" />
+                  </a>
+
+                </div>
+              </div>
+
+              <!-- Editorial Signature Perfectly Centered -->
+              <div style="border-top: 1px solid #e4e4e7; padding-top: 32px; margin-top: 40px; text-align: center;">
+                <p style="margin: 0; font-size: 16px; font-weight: 700; color: #09090b; letter-spacing: -0.3px; font-family: 'Outfit', sans-serif;">noé hidalgo.</p>
+                <p style="margin: 6px 0 0 0; font-size: 10px; color: #71717a; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; font-family: 'Inter', sans-serif;">Estudiante de ADE & Desarrollador Full-Stack</p>
+                <p style="margin: 12px 0 0 0; font-size: 12px; font-family: 'Inter', sans-serif;"><a href="https://www.hidalgonoe.com" style="color: #09090b; text-decoration: underline; font-weight: 600;">www.hidalgonoe.com</a></p>
+              </div>
+
             </div>
           </div>
         `,
