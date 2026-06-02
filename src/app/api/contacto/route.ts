@@ -15,9 +15,16 @@ export async function POST(request: Request) {
       );
     }
 
+    if (message.length > 1000) {
+      return NextResponse.json(
+        { success: false, error: "El mensaje supera el límite máximo permitido de 1000 caracteres." },
+        { status: 400 }
+      );
+    }
+
     // 1. Enviar correo de notificación a Noé (Diseño Centrado Premium)
     const notificationResult = await resend.emails.send({
-      from: "Portfolio Contacto <onboarding@resend.dev>",
+      from: "Portfolio Contacto <no-reply@hidalgonoe.com>",
       to: "noehidalgofernandez@gmail.com",
       subject: `Nuevo contacto: ${name}`,
       replyTo: email,
@@ -82,7 +89,7 @@ export async function POST(request: Request) {
     // 2. Enviar correo de confirmación al usuario (Diseño Centrado Premium)
     try {
       await resend.emails.send({
-        from: "Noé Hidalgo <onboarding@resend.dev>",
+        from: "Noé Hidalgo <no-reply@hidalgonoe.com>",
         to: email,
         subject: `He recibido tu mensaje, ${name}`,
         html: `
@@ -151,6 +158,11 @@ export async function POST(request: Request) {
                 <p style="margin: 0; font-size: 16px; font-weight: 700; color: #09090b; letter-spacing: -0.3px; font-family: 'Outfit', sans-serif;">noé hidalgo.</p>
                 <p style="margin: 6px 0 0 0; font-size: 10px; color: #71717a; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; font-family: 'Inter', sans-serif;">Estudiante de ADE & Desarrollador Full-Stack</p>
                 <p style="margin: 12px 0 0 0; font-size: 12px; font-family: 'Inter', sans-serif;"><a href="https://www.hidalgonoe.com" style="color: #09090b; text-decoration: underline; font-weight: 600;">www.hidalgonoe.com</a></p>
+              </div>
+
+              <!-- Automated Message Notice -->
+              <div style="margin-top: 24px; font-size: 10px; color: #a1a1aa; text-align: center; font-family: 'Inter', sans-serif; letter-spacing: 0.5px;">
+                Este es un mensaje automático, por favor no respondas a este correo.
               </div>
 
             </div>

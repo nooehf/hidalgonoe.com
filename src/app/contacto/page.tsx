@@ -33,6 +33,12 @@ export default function Contacto() {
     setIsSubmitting(true);
     setErrorMessage("");
 
+    if (formState.message.length > 1000) {
+      setErrorMessage("El mensaje supera el límite máximo permitido de 1000 caracteres. Por favor, acórtalo e inténtalo de nuevo.");
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       const response = await fetch("/api/contacto", {
         method: "POST",
@@ -256,11 +262,20 @@ export default function Contacto() {
                     name="message"
                     required
                     rows={4}
+                    maxLength={1000}
                     value={formState.message}
                     onChange={handleChange}
                     placeholder="Cuéntame brevemente sobre tu proyecto, objetivos y plazos..."
                     className="w-full bg-transparent border-b border-brand-dark/20 py-3 text-sm text-brand-text placeholder-brand-muted/50 focus:outline-hidden focus:border-brand-text transition-colors rounded-none font-sans resize-none"
                   />
+                  <div className="flex justify-between items-center mt-2 text-[11px] font-sans">
+                    <span className="text-brand-muted">
+                      Límite recomendado: 1000 caracteres
+                    </span>
+                    <span className={`${formState.message.length > 1000 ? 'text-red-500 font-semibold' : 'text-brand-muted'}`}>
+                      {formState.message.length} / 1000 caracteres
+                    </span>
+                  </div>
                 </div>
 
                 <div className="pt-2">
@@ -269,6 +284,7 @@ export default function Contacto() {
                     variant="primary"
                     className="w-full"
                     showArrow={!isSubmitting}
+                    disabled={isSubmitting || formState.message.length > 1000}
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">

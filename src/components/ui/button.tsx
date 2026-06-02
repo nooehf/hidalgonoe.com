@@ -15,6 +15,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   target?: string;
   rel?: string;
+  disabled?: boolean;
 }
 
 export default function Button({
@@ -27,9 +28,10 @@ export default function Button({
   type = "button",
   target,
   rel,
+  disabled = false,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-display text-sm font-medium tracking-tight transition-all duration-300 focus:outline-hidden focus:ring-1 focus:ring-brand-dark/20";
+    "inline-flex items-center justify-center font-display text-sm font-medium tracking-tight transition-all duration-300 focus:outline-hidden focus:ring-1 focus:ring-brand-dark/20 disabled:opacity-50 disabled:pointer-events-none";
   
   const variants = {
     primary:
@@ -73,6 +75,7 @@ export default function Button({
     <button
       type={type}
       onClick={onClick}
+      disabled={disabled}
       className={`${baseStyles} ${variants[variant]} ${className}`}
     >
       {buttonContent}
