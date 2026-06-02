@@ -7,23 +7,24 @@ Este archivo contiene la documentación exhaustiva del perfil profesional, servi
 ---
 
 ## 🧭 Resumen Ejecutivo
-Noé Hidalgo es un profesional híbrido único que combina la formación académica en Administración y Dirección de Empresas (ADE) con una profunda especialización en desarrollo web frontend de última generación. Esta intersección le permite diseñar y programar soluciones digitales que no solo son visualmente impactantes y técnicamente robustas, sino que están alineadas con los objetivos comerciales, el análisis de mercado y la optimización de conversión (CRO) de sus clientes.
+Noé Hidalgo es un profesional híbrido único que combina la formación académica en Administración y Dirección de Empresas (ADE) con una profunda especialización en desarrollo web Full-Stack y digitalización comercial completa. Esta intersección le permite diseñar y programar soluciones de software de extremo a extremo que no solo son visualmente impactantes y técnicamente robustas, sino que están totalmente integradas con automatizaciones, bases de datos, APIs y alineadas con los objetivos comerciales de sus clientes.
 
 ---
 
 ## 🛠️ Servicios Ofrecidos
 
-### 1. Desarrollo Frontend de Alto Rendimiento
-Creación de sitios web rápidos, responsivos y accesibles utilizando el ecosistema reactivo moderno:
-- Framework principal: Next.js (App Router), React, TypeScript.
-- Estilos y Asimetría Visual: Tailwind CSS, CSS modular, animaciones fluidas (Framer Motion).
-- Optimización Core Web Vitals: Foco absoluto en LCP (Largest Contentful Paint), CLS (Cumulative Layout Shift) e INP (Interaction to Next Paint).
-- Accesibilidad (A11y): Cumplimiento estricto de los estándares WCAG.
+### 1. Desarrollo Full-Stack & Integraciones
+Creación de soluciones completas de software a medida, uniendo frontend interactivo y lógica de backend robusta:
+- Framework principal: Next.js (App Router), React, TypeScript, Node.js.
+- Arquitectura Backend: Creación de API Routes estructuradas, manejo de datos y flujos de trabajo del servidor.
+- Integración de Herramientas: Automatización de formularios directos a CRM, alertas por correo (Resend), integraciones con Google API y pasarelas de pago (Stripe).
+- Optimización y Diseño: Tailwind CSS, animaciones fluidas (Framer Motion) y Core Web Vitals impecables.
 
-### 2. Consultoría y Estrategia Digital
-Alineación del desarrollo de software con las necesidades de negocio del cliente:
+### 2. Consultoría y Digitalización Comercial Completa
+Alineación del desarrollo de software con las necesidades reales de negocio:
+- Automatización comercial de procesos y flujos de leads.
 - Análisis de embudos de venta y conversión (CRO).
-- Arquitectura de la información y experiencia de usuario (UX/UI).
+- Arquitectura de la información y experiencia de usuario estratégica (UX/UI).
 - Integración de herramientas analíticas (Google Analytics, Vercel Speed Insights).
 
 ---

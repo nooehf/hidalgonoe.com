@@ -2,7 +2,7 @@
 
 > https://www.hidalgonoe.com
 
-Estudiante de ADE (Administración y Dirección de Empresas) y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo frontend de alto rendimiento con Next.js y Tailwind CSS.
+Estudiante de ADE (Administración y Dirección de Empresas) y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo full-stack para una digitalización comercial completa con Next.js, Node.js y APIs modernas.
 
 ## Información de Contacto
 - Email: noehidalgofernandez@gmail.com
@@ -12,7 +12,7 @@ Estudiante de ADE (Administración y Dirección de Empresas) y creador de sitios
 
 ## Secciones Principales
 - [Proyectos](https://www.hidalgonoe.com/proyectos): Portfolio de desarrollos web premium creados a medida.
-- [Servicios](https://www.hidalgonoe.com/servicios): Desarrollo frontend, consultoría estratégica digital y optimización de marcas.
+- [Servicios](https://www.hidalgonoe.com/servicios): Desarrollo Full-Stack, digitalización comercial completa, integraciones de sistemas y optimización estratégica de marcas.
 - [Sobre mí](https://www.hidalgonoe.com/sobre-mi): Mi trayectoria académica en ADE y mi pasión por el código.
 - [Contacto](https://www.hidalgonoe.com/contacto): Formularios y canales para iniciar nuevos proyectos.
 

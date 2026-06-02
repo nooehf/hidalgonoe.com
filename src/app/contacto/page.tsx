@@ -17,6 +17,7 @@ export default function Contacto() {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -27,21 +28,38 @@ export default function Contacto() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate brief API loading (frontend-only logic)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormState({
-        name: "",
-        email: "",
-        company: "",
-        message: "",
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contacto", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
       });
-    }, 1500);
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setIsSubmitted(true);
+        setFormState({
+          name: "",
+          email: "",
+          company: "",
+          message: "",
+        });
+      } else {
+        setErrorMessage(data.error || "Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo.");
+      }
+    } catch (error) {
+      setErrorMessage("No se pudo conectar con el servidor. Por favor, comprueba tu conexión.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -161,6 +179,11 @@ export default function Contacto() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
+                {errorMessage && (
+                  <div className="p-4 text-sm font-sans text-red-600 bg-red-500/10 border border-red-500/20 rounded-md">
+                    {errorMessage}
+                  </div>
+                )}
                 {/* Name field */}
                 <div className="space-y-2">
                   <label

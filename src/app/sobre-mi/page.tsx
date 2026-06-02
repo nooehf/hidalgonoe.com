@@ -69,7 +69,7 @@ export default function SobreMi() {
             Hola, soy **Noé Hidalgo**. Estudio Administración y Dirección de Empresas (ADE) en la Universidad de Sevilla y me apasiona la creación de productos digitales. No veo las páginas web únicamente como líneas de código, sino como un engranaje estratégico clave para potenciar negocios, automatizar tareas repetitivas y comunicar ideas de forma impactante.
           </p>
           <p className="mt-4 text-base sm:text-lg text-brand-muted font-sans leading-relaxed text-pretty">
-            Mi enfoque radica en fusionar el criterio analítico y comercial de mis estudios universitarios con mi dominio autodidacta del desarrollo frontend moderno, garantizando sitios web rápidos, elegantes, 100% responsivos y orientados a la conversión.
+            Mi enfoque radica en fusionar el criterio analítico y comercial de mis estudios universitarios con mi dominio autodidacta del desarrollo full-stack moderno y la digitalización, garantizando sistemas robustos, rápidos, elegantes y orientados a la conversión.
           </p>
         </TransitionView>
         <TransitionView delay={0.3} yOffset={15} className="mt-8">

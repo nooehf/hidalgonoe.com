@@ -23,8 +23,8 @@ export default function Home() {
 
           <TransitionView delay={0.2} yOffset={25}>
             <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-text leading-[1.05] text-balance">
-              Estudio negocio de día.<br />
-              Diseño y programo<br />
+              Estudio negocio de día. <br />
+              Diseño y programo <br />
               webs de noche.
             </h1>
           </TransitionView>

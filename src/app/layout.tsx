@@ -20,7 +20,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Noé Hidalgo | ADE & Desarrollo Web",
   description:
-    "Estudiante de ADE (Administración y Dirección de Empresas) y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo frontend de alto rendimiento.",
+    "Estudiante de ADE y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo full-stack para una digitalización comercial completa.",
   keywords: [
     "Estudiante ADE",
     "Desarrollador Web Independiente",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Noé Hidalgo | ADE & Desarrollo Web",
     description:
-      "Estudiante de ADE (Administración y Dirección de Empresas) y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo frontend de alto rendimiento.",
+      "Estudiante de ADE y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo full-stack para una digitalización comercial completa.",
     url: "https://www.hidalgonoe.com",
     siteName: "Noé Hidalgo",
     locale: "es_ES",
@@ -53,8 +53,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Noé Hidalgo | ADE & Desarrollo Web",
     description:
-      "Estudiante de ADE (Administración y Dirección de Empresas) y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo frontend de alto rendimiento.",
+      "Estudiante de ADE y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo full-stack para una digitalización comercial completa.",
     images: ["/og-image.png"],
+    site: "@nooehf",
+    creator: "@nooehf",
   },
 };
 
@@ -78,8 +80,8 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Noé Hidalgo",
               "url": "https://www.hidalgonoe.com",
-              "jobTitle": "Desarrollador Web & Consultor de Negocio",
-              "description": "Estudiante de ADE y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo frontend de alto rendimiento.",
+              "jobTitle": "Desarrollador Full-Stack & Consultor de Negocio",
+              "description": "Estudiante de ADE y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo full-stack para una digitalización comercial completa.",
               "sameAs": [
                 "https://www.linkedin.com/in/no%C3%A9-hidalgo-fern%C3%A1ndez-67bb43231",
                 "https://github.com/nooehf"
