@@ -74,7 +74,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/noé-hidalgo-fernández-67bb43231"
+                  href="https://www.linkedin.com/in/no%C3%A9-hidalgo-fern%C3%A1ndez-67bb43231"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-brand-muted hover:text-brand-text transition-colors"

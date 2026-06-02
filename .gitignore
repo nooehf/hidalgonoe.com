@@ -94,3 +94,8 @@ Thumbs.db
 # env files
 .env*.local
 .env
+
+# SEO Audit Reports
+ACTION-PLAN.md
+FULL-AUDIT-REPORT.md
+seo-report-*.html

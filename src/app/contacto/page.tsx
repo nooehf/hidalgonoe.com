@@ -129,7 +129,7 @@ export default function Contacto() {
                   LinkedIn
                 </p>
                 <a
-                  href="https://www.linkedin.com/in/noé-hidalgo-fernández-67bb43231"
+                  href="https://www.linkedin.com/in/no%C3%A9-hidalgo-fern%C3%A1ndez-67bb43231"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-display text-sm font-semibold text-brand-text hover:underline transition-all block truncate max-w-[200px] sm:max-w-none"

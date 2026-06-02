@@ -1,0 +1,37 @@
+# Noé Hidalgo - Perfil Profesional Detallado
+
+> https://www.hidalgonoe.com
+
+Este archivo contiene la documentación exhaustiva del perfil profesional, servicios, proyectos y habilidades de Noé Hidalgo para consumo de modelos de lenguaje e inteligencias artificiales.
+
+---
+
+## 🧭 Resumen Ejecutivo
+Noé Hidalgo es un profesional híbrido único que combina la formación académica en Administración y Dirección de Empresas (ADE) con una profunda especialización en desarrollo web frontend de última generación. Esta intersección le permite diseñar y programar soluciones digitales que no solo son visualmente impactantes y técnicamente robustas, sino que están alineadas con los objetivos comerciales, el análisis de mercado y la optimización de conversión (CRO) de sus clientes.
+
+---
+
+## 🛠️ Servicios Ofrecidos
+
+### 1. Desarrollo Frontend de Alto Rendimiento
+Creación de sitios web rápidos, responsivos y accesibles utilizando el ecosistema reactivo moderno:
+- Framework principal: Next.js (App Router), React, TypeScript.
+- Estilos y Asimetría Visual: Tailwind CSS, CSS modular, animaciones fluidas (Framer Motion).
+- Optimización Core Web Vitals: Foco absoluto en LCP (Largest Contentful Paint), CLS (Cumulative Layout Shift) e INP (Interaction to Next Paint).
+- Accesibilidad (A11y): Cumplimiento estricto de los estándares WCAG.
+
+### 2. Consultoría y Estrategia Digital
+Alineación del desarrollo de software con las necesidades de negocio del cliente:
+- Análisis de embudos de venta y conversión (CRO).
+- Arquitectura de la información y experiencia de usuario (UX/UI).
+- Integración de herramientas analíticas (Google Analytics, Vercel Speed Insights).
+
+---
+
+## 📂 Proyectos Destacados
+- **Portfolio hidalgonoe.com:** Plataforma personal asimétrica premium, construida con Next.js 15, que sirve como muestra de habilidades técnicas y de diseño, con widgets interactivos de IA integrados y optimización SEO sobresaliente.
+
+---
+
+## 📖 Trayectoria y Filosofía
+Noé Hidalgo estudia negocio de día y diseña y programa webs de noche. Esta dualidad le otorga una ventaja competitiva: entiende el balance general de una empresa, sus costos, su marketing y su propuesta de valor, y traduce todo ese conocimiento empresarial en un producto de software limpio, escalable y preparado para captar leads y ventas.

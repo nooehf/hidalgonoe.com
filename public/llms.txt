@@ -1,0 +1,22 @@
+# Noé Hidalgo - ADE & Desarrollo Web
+
+> https://www.hidalgonoe.com
+
+Estudiante de ADE (Administración y Dirección de Empresas) y creador de sitios web a medida. Fusiono visión estratégica de negocio y desarrollo frontend de alto rendimiento con Next.js y Tailwind CSS.
+
+## Información de Contacto
+- Email: noehidalgofernandez@gmail.com
+- Teléfono: +34 644 21 57 25
+- LinkedIn: https://www.linkedin.com/in/no%C3%A9-hidalgo-fern%C3%A1ndez-67bb43231
+- GitHub: https://github.com/nooehf
+
+## Secciones Principales
+- [Proyectos](https://www.hidalgonoe.com/proyectos): Portfolio de desarrollos web premium creados a medida.
+- [Servicios](https://www.hidalgonoe.com/servicios): Desarrollo frontend, consultoría estratégica digital y optimización de marcas.
+- [Sobre mí](https://www.hidalgonoe.com/sobre-mi): Mi trayectoria académica en ADE y mi pasión por el código.
+- [Contacto](https://www.hidalgonoe.com/contacto): Formularios y canales para iniciar nuevos proyectos.
+
+## Detalles Técnicos del Sitio
+- Built with: Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS.
+- Host: Vercel.
+- SEO & Performance: Alta optimización móvil, accesibilidad impecable, puntuaciones de rendimiento sobresalientes y datos estructurados integrados.
