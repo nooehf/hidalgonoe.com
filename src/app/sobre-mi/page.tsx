@@ -26,6 +26,18 @@ const history: TimelineItem[] = [
     ],
   },
   {
+    period: "jun. 2026",
+    role: "Certificación en Facturación Electrónica y Sistemas Verifactu",
+    company: "Acelera pyme",
+    description:
+      "Formación especializada en la implantación práctica de la nueva facturación electrónica obligatoria para PYMEs y autónomos. Capacitación centrada en los requisitos legales de la Ley Antifraude y las especificaciones técnicas del entorno Verifactu, adquiriendo una visión integral para adaptar la gestión empresarial y el desarrollo de software local a las normativas vigentes.",
+    bullets: [
+      "Requisitos legales de la Ley Antifraude y especificaciones del entorno técnico Verifactu.",
+      "Adaptación y desarrollo de software local de facturación a la nueva normativa obligatoria.",
+      "Implantación y digitalización de procesos de facturación en PYMEs y autónomos.",
+    ],
+  },
+  {
     period: "abr. 2026 – may. 2026",
     role: "BIP Enhance Skills in International Business, Business Administration and Management, General",
     company: "Haaga-Helia University of Applied Sciences",
@@ -130,6 +142,7 @@ export default function SobreMi() {
                 <li>Integración de sistemas CRM y Webhooks</li>
                 <li>Automatizaciones con Google Workspace (Sheets/Drive)</li>
                 <li>Posicionamiento SEO On-Page (Top 3 en Google)</li>
+                <li>Integración de Facturación Electrónica (Estándar Verifactu)</li>
               </ul>
             </TransitionView>
 
@@ -144,6 +157,7 @@ export default function SobreMi() {
                 <li><strong>Dirección de Operaciones:</strong> Optimización y automatización de procesos</li>
                 <li><strong>Investigación de Mercados:</strong> Análisis de datos y competencia local</li>
                 <li><strong>Planificación Comercial:</strong> Estructuración lógica de propuestas de valor</li>
+                <li><strong>Cumplimiento Normativo:</strong> Adaptación de procesos a la Ley Antifraude y Verifactu</li>
               </ul>
             </TransitionView>
 
